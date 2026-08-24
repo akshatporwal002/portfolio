@@ -2,6 +2,7 @@ import { ArrowRight, ArrowUpRight, Atom, Award, Bot, Box, Boxes, Braces, ChartNo
 import Link from "next/link";
 import { projects } from "@/data/projects";
 import { InteractiveProjectCard } from "./interactive-project-card";
+import { GitHubContributionGraph } from "./github-contribution-graph";
 import { ProjectVisual } from "./project-visual";
 import { SiteHeader } from "./site-header";
 
@@ -72,6 +73,7 @@ export default function Home() {
 
           <section className="contribution-section" id="open-source" aria-labelledby="contribution-title">
             <div className="section-title"><h2 id="contribution-title">Git contribution log</h2><span /><a className="section-link" href={`${githubProfile}?tab=overview&from=2026-08-01&to=2026-08-23`} target="_blank" rel="noreferrer">Full activity <ArrowUpRight size={14} /></a></div>
+            <GitHubContributionGraph />
             <div className="contribution-layout">
               <div className="activity-log">{activity.map((item) => { const Icon = item.type === "pull" ? GitPullRequest : GitCommitHorizontal; return <a href={item.href} target="_blank" rel="noreferrer" key={item.href}><time>{item.date}</time><span className="activity-mark"><Icon size={16} aria-hidden="true" /></span><p><strong>{item.title}</strong><span>{item.repo}</span></p><ArrowUpRight className="activity-arrow" size={16} aria-hidden="true" /></a>; })}</div>
               <aside className="open-source-note"><span>OPEN SOURCE // CURRENT</span><h3>Building in public.</h3><p>Recent work spans AI education, provider reliability, and production infrastructure. Every entry links to the original artifact.</p><a href="https://github.com/rohitg00/ai-engineering-from-scratch" target="_blank" rel="noreferrer">Upstream project <ArrowUpRight size={15} /></a></aside>
