@@ -64,6 +64,17 @@ button { color: inherit; font: inherit; }
 .visual-toolbar { height: 38px; padding: 0 15px; border-bottom: 1px solid var(--line); display: flex; align-items: center; gap: 7px; color: var(--muted); font: 600 11px var(--mono); letter-spacing: .08em; }
 .visual-toolbar span { margin-right: auto; }
 .visual-toolbar i { width: 7px; height: 7px; border: 1px solid var(--muted); border-radius: 50%; }
+.has-media .visual-toolbar { position: relative; z-index: 2; background: color-mix(in srgb, var(--paper) 94%, transparent); backdrop-filter: blur(8px); }
+.project-media { position: absolute; inset: 38px 0 0; }
+.project-media:not(.project-media--gallery) .project-media-frame { position: absolute; inset: 0; }
+.project-media-frame { position: relative; min-width: 0; overflow: hidden; background: #101010; }
+.project-media-frame img { object-fit: cover; }
+.project-media--gallery { padding: 18px 24px; background: #101010; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.project-media--gallery .project-media-frame { border: 1px solid rgb(255 255 255 / 24%); box-shadow: 0 14px 24px rgb(0 0 0 / 28%); }
+.project-media--gallery .project-media-frame:first-child { transform: translateY(9px) rotate(-2deg); }
+.project-media--gallery .project-media-frame:nth-child(2) { z-index: 1; transform: translateY(-3px); }
+.project-media--gallery .project-media-frame:last-child { transform: translateY(9px) rotate(2deg); }
+.is-compact .project-media--gallery { padding: 12px 18px; gap: 8px; }
 .quantum-circuit { padding: 46px 32px 28px; }
 .quantum-circuit > div { display: grid; grid-template-columns: 36px 1fr 42px 1fr; align-items: center; margin-bottom: 23px; }
 .quantum-circuit b, .quantum-circuit p { font: 500 11px var(--mono); }
@@ -222,6 +233,16 @@ button { color: inherit; font: inherit; }
 .case-hero { min-height: 500px; padding: 52px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(380px, .8fr); align-items: center; gap: 64px; }
 .case-hero h1 { margin: 0; color: var(--accent); font: 400 clamp(72px, 8vw, 110px)/.78 var(--display); text-transform: uppercase; overflow-wrap: anywhere; }
 .case-hero > div > p { max-width: 54ch; margin: 20px 0 0; color: var(--soft); font: 18px/1.55 var(--body); }
+.case-screenshots { padding: 50px 0 56px; border-bottom: 1px solid var(--line); }
+.case-screenshots > header { margin-bottom: 20px; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+.case-screenshots > header span { color: var(--accent); font: 650 11px var(--mono); letter-spacing: .1em; }
+.case-screenshots > header h2 { margin: 0; font: 400 38px/1 var(--display); text-transform: uppercase; }
+.case-screenshots > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.case-screenshots figure { min-width: 0; margin: 0; border: 1px solid var(--line); background: var(--paper); }
+.case-screenshots figure > div { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: #101010; }
+.case-screenshots figure img { object-fit: cover; transition: transform var(--reveal) var(--ease); }
+.case-screenshots figure:hover img { transform: scale(1.025); }
+.case-screenshots figcaption { min-height: 58px; padding: 12px 14px; border-top: 1px solid var(--line); color: var(--soft); font: 13px/1.4 var(--body); }
 .case-body { padding: 56px 0 82px; display: grid; grid-template-columns: 280px minmax(0, 680px); justify-content: space-between; gap: 64px; }
 .case-facts { position: sticky; top: 96px; height: max-content; }
 .case-facts dl { margin: 0; border-top: 1px solid var(--line); }
@@ -303,6 +324,9 @@ button { color: inherit; font: inherit; }
   .case-hero { padding: 42px 0; gap: 34px; }
   .case-hero h1 { font-size: clamp(64px, 20vw, 88px); }
   .case-body { grid-template-columns: 1fr; padding-top: 38px; gap: 42px; }
+  .case-screenshots > header { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .case-screenshots > div { grid-template-columns: 1fr; }
+  .case-screenshots figure > div { aspect-ratio: 16 / 10; }
   .case-facts { position: static; }
   .case-prose p, .case-prose li { font-size: 17px; }
 }

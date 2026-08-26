@@ -25,7 +25,7 @@ const activity = [
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
   return (
     <InteractiveProjectCard href={`/projects/${project.slug}`} label={`Read the ${project.title} case study`}>
-      <ProjectVisual kind={project.kind} compact />
+      <ProjectVisual kind={project.kind} screenshots={project.screenshots} compact />
       <article className="project-details">
         <div className="project-title-row"><h3>{project.title}</h3><span>{project.meta}</span></div>
         <p>{project.shortDescription}</p>

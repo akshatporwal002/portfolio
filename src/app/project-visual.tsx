@@ -1,6 +1,31 @@
 import type { Project } from "@/data/projects";
+import Image from "next/image";
 
-export function ProjectVisual({ kind, compact = false }: { kind: Project["kind"]; compact?: boolean }) {
+export function ProjectVisual({ kind, compact = false, screenshots }: { kind: Project["kind"]; compact?: boolean; screenshots?: Project["screenshots"] }) {
+  if (screenshots?.length) {
+    const featured = screenshots.slice(0, 3);
+
+    return (
+      <figure className={`project-visual project-visual--${kind} has-media${compact ? " is-compact" : ""}`}>
+        <div className="visual-toolbar"><span>PRODUCT // CAPTURE</span><i /><i /><i /></div>
+        <div className={`project-media${featured.length > 1 ? " project-media--gallery" : ""}`}>
+          {featured.map((screenshot, index) => (
+            <div className="project-media-frame" key={screenshot.src}>
+              <Image
+                src={screenshot.src}
+                alt={screenshot.alt}
+                fill
+                loading={!compact && index === 0 ? "eager" : "lazy"}
+                sizes={compact ? "(max-width: 680px) 100vw, 50vw" : "(max-width: 960px) 100vw, 42vw"}
+                style={{ objectPosition: screenshot.position ?? "center" }}
+              />
+            </div>
+          ))}
+        </div>
+      </figure>
+    );
+  }
+
   return (
     <div className={`project-visual project-visual--${kind}${compact ? " is-compact" : ""}`} aria-hidden="true">
       <div className="visual-toolbar"><span>{kind === "curriculum" ? "BUILD // USE //" : "EVIDENCE // SYSTEM"}</span><i /><i /><i /></div>
