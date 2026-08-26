@@ -25,7 +25,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "quantumlearn", kind: "quantum", title: "QuantumLearn", meta: "Research · AI learning", year: "2026",
+    slug: "quantumlearn", kind: "quantum", title: "Learn Lens", meta: "Research · AI learning", year: "2026",
     summary: "An agentic learning system for introductory quantum computing, grounded in executable simulations.",
     shortDescription: "Agentic tutoring for quantum computing with simulation-grounded feedback.",
     repository: "https://github.com/akshatporwal002/Monash-Honours-Project",
@@ -35,17 +35,44 @@ export const projects: Project[] = [
     approach: "Pair an agentic teaching workflow with executable quantum simulations, then use the resulting evidence to ground feedback and evaluation.",
     contributions: ["Designed the learning and agent workflow around inspectable simulation evidence.", "Built the Python research system and TypeScript learning interface as one product loop.", "Developed evaluation paths for feedback quality instead of relying on conversational fluency alone."],
     outcomes: ["A working research platform for testing agent-guided quantum learning.", "A reusable architecture for connecting lessons, tools, feedback, and evaluation."],
+    screenshots: [{
+      src: "/projects/learn-lens-dashboard.png",
+      alt: "Learn Lens student dashboard showing a guided quantum foundations learning pathway.",
+      position: "center top",
+    }, {
+      src: "/projects/learn-lens-activity.png",
+      alt: "Learn Lens quantum learning activity asking students to identify a superposition statement.",
+      position: "center top",
+    }, {
+      src: "/projects/learn-lens-sign-in.png",
+      alt: "Learn Lens sign-in screen with student, educator, and admin workspace options.",
+      position: "center",
+    }],
   },
   {
     slug: "velexar", kind: "velexar", title: "Velexar", meta: "Career intelligence · Full stack", year: "2026",
     summary: "A career intelligence platform for CV analysis, job recommendation, and AI-assisted career workflows.",
     shortDescription: "Career intelligence built around fast retrieval, matching, and streaming feedback.",
+    live: "https://velexar.com",
     languages: ["Python", "TypeScript", "SQL"], tools: ["FastAPI", "PostgreSQL", "Redis", "Vector search", "SSE"],
     role: "Full-stack and backend engineer", status: "Active development",
     problem: "Career tools commonly treat CV feedback and job discovery as separate workflows, while slow retrieval and generic matching make the experience difficult to trust.",
     approach: "Connect CV analysis, job ingestion, and vector-based matching through asynchronous FastAPI services, indexed PostgreSQL data, Redis caching, and streamed responses.",
     contributions: ["Designed asynchronous backend services for high-throughput API ingestion.", "Implemented vector search and retrieval pipelines for job-user matching.", "Developed PostgreSQL schemas, indexing strategies, Redis caching, and SSE response streaming."],
     outcomes: ["Reduced system latency by 40% through caching and streamed responses.", "Balanced retrieval quality, response latency, and distributed-system scalability in one product workflow."],
+    screenshots: [{
+      src: "/projects/velexar-home.png",
+      alt: "Velexar landing page introducing its career intelligence workflow.",
+      position: "center top",
+    }, {
+      src: "/projects/velexar-career-hub.png",
+      alt: "Velexar Career Hub with CV analysis, refinement, project, and interview pathways.",
+      position: "left top",
+    }, {
+      src: "/projects/velexar-sign-in.png",
+      alt: "Velexar sign-in page with Google and LinkedIn authentication options.",
+      position: "center",
+    }],
   },
   {
     slug: "stonks-in-hand", kind: "markets", title: "Stonks in Hand", meta: "Team product · Infrastructure", year: "2026",
