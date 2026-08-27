@@ -1,7 +1,7 @@
 import { ArrowRight, ArrowUpRight, Atom, Award, Bot, Box, Boxes, Braces, ChartNoAxesCombined, Cloud, Coffee, Container, Database, FileJson, FlaskConical, GitCommitHorizontal, GitPullRequest, GraduationCap, Leaf, Network, PanelsTopLeft, RefreshCw, Search, Workflow, Zap } from "lucide-react";
 import Link from "next/link";
+import { ElasticGallery } from "@/components/ui/elastic-gallery";
 import { projects } from "@/data/projects";
-import { InteractiveProjectCard } from "./interactive-project-card";
 import { GitHubContributionGraph } from "./github-contribution-graph";
 import { ProjectVisual } from "./project-visual";
 import { SiteHeader } from "./site-header";
@@ -22,18 +22,6 @@ const activity = [
   { date: "14 AUG 2026", type: "pull", title: "Added secure AWS staging deployment", repo: "2026W1-Stocks-In-Hand · merged", href: "https://github.com/Monash-FIT3170/2026W1-Stocks-In-Hand/pull/14" },
 ];
 
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
-  return (
-    <InteractiveProjectCard href={`/projects/${project.slug}`} label={`Read the ${project.title} case study`}>
-      <ProjectVisual kind={project.kind} screenshots={project.screenshots} compact />
-      <article className="project-details">
-        <div className="project-title-row"><h3>{project.title}</h3><span>{project.meta}</span></div>
-        <p>{project.shortDescription}</p>
-        <div className="project-bottom-row"><span>{project.languages.slice(0, 3).join(" · ")}</span><strong>Case study <ArrowRight size={14} /></strong></div>
-      </article>
-    </InteractiveProjectCard>
-  );
-}
 export default function Home() {
   return (
     <>
@@ -53,7 +41,16 @@ export default function Home() {
           <section className="compact-showcase" id="work" aria-labelledby="work-title">
             <div className="work-column">
               <div className="section-title"><h2 id="work-title">Selected work</h2><span /><Link className="section-link" href="/projects">View all projects <ArrowRight size={14} /></Link></div>
-              <div className="project-grid">{projects.map((project) => <ProjectCard key={project.slug} project={project} />)}</div>
+              <ElasticGallery items={projects.map((project) => ({
+                id: project.slug,
+                title: project.title,
+                category: project.meta,
+                description: project.shortDescription,
+                href: `/projects/${project.slug}`,
+                src: project.screenshots?.[0]?.src,
+                alt: project.screenshots?.[0]?.alt ?? `${project.title} project preview`,
+                position: project.screenshots?.[0]?.position,
+              }))} />
             </div>
           </section>
 
@@ -65,7 +62,7 @@ export default function Home() {
           <section className="credentials-section" id="credentials" aria-labelledby="credentials-title">
             <div className="section-title"><h2 id="credentials-title">Education + certifications</h2><span /></div>
             <div className="credentials-grid">
-              <article><div><GraduationCap size={24} aria-hidden="true" /></div><p><span>MONASH UNIVERSITY · 2023–2027</span><strong>Bachelor of Software Engineering and Bachelor of Commerce</strong><small>Actuarial Studies · Melbourne, Australia</small></p></article>
+              <article><div><GraduationCap size={24} aria-hidden="true" /></div><p><span>MONASH UNIVERSITY · 2023-2027</span><strong>Bachelor of Software Engineering and Bachelor of Commerce</strong><small>Actuarial Studies · Melbourne, Australia</small></p></article>
               <article><div><Award size={24} aria-hidden="true" /></div><p><span>CERTIFICATIONS</span><strong>AWS Certified Cloud Practitioner</strong><small>Amazon Web Services</small></p></article>
               <article><div><Award size={24} aria-hidden="true" /></div><p><span>CERTIFICATIONS</span><strong>IBM Machine Learning</strong><small>IBM</small></p></article>
             </div>
