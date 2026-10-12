@@ -37,6 +37,7 @@ export function SiteHeader() {
       <Link className="brand-lockup" href="/" aria-label="Akshat Porwal, home"><span>AP</span><strong>AKSHAT PORWAL</strong></Link>
       <nav className={menuOpen ? "site-nav is-open" : "site-nav"} aria-label="Main navigation">
         <Link href="/#work" onClick={() => setMenuOpen(false)}>Work</Link>
+        <Link href="/research" onClick={() => setMenuOpen(false)}>Research</Link>
         <Link href="/#skills" onClick={() => setMenuOpen(false)}>Skills</Link>
         <Link href="/#credentials" onClick={() => setMenuOpen(false)}>Credentials</Link>
         <Link href="/#open-source" onClick={() => setMenuOpen(false)}>Open source</Link>
