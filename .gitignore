@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .gitnexus
+
+# Downloaded third-party inspection material; never bundled into the app.
+/design-reference/mildsugar/

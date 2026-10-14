@@ -1,52 +1,40 @@
 "use client";
-
-import { GitBranch, Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-
-const githubProfile = "https://github.com/akshatporwal002";
+import { projects } from "@/data/projects";
+import { MotionToggle } from "./portfolio-motion";
 
 export function SiteHeader() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const themeButton = useRef<HTMLButtonElement>(null);
-
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const panel = useRef<HTMLDivElement>(null);
+  const toggle = useRef<HTMLButtonElement>(null);
   useEffect(() => {
-    function onKeyDown(event: KeyboardEvent) { if (event.key === "Escape") setMenuOpen(false); }
-    window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
-  }, []);
-
-  function applyTheme(nextDark: boolean) {
-    document.documentElement.dataset.theme = nextDark ? "dark" : "light";
-    localStorage.setItem("portfolio-theme", nextDark ? "dark" : "light");
+    if (!open) return;
+    panel.current?.querySelector<HTMLAnchorElement>("a")?.focus();
+    function outside(event: MouseEvent) { if (!panel.current?.contains(event.target as Node)) setOpen(false); }
+    function keyboard(event: KeyboardEvent) {
+      if (event.key === "Escape") { setOpen(false); toggle.current?.focus(); }
+      if (event.key !== "Tab") return;
+      const elements = panel.current?.querySelectorAll<HTMLElement>("button, a");
+      if (!elements?.length) return;
+      const first = elements[0], last = elements[elements.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+    document.addEventListener("mousedown", outside);
+    document.addEventListener("keydown", keyboard);
+    return () => { document.removeEventListener("mousedown", outside); document.removeEventListener("keydown", keyboard); };
+  }, [open]);
+  function item(href: string, label: string) {
+    return <Link href={href} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>;
   }
-
-  function toggleTheme() {
-    const nextDark = document.documentElement.dataset.theme !== "dark";
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const transition = document.startViewTransition?.bind(document);
-    if (!transition || reduced || !themeButton.current) { applyTheme(nextDark); return; }
-    const rect = themeButton.current.getBoundingClientRect();
-    document.documentElement.style.setProperty("--theme-x", `${rect.left + rect.width / 2}px`);
-    document.documentElement.style.setProperty("--theme-y", `${rect.top + rect.height / 2}px`);
-    transition(() => applyTheme(nextDark));
-  }
-
-  return (
-    <header className="site-header">
-      <Link className="brand-lockup" href="/" aria-label="Akshat Porwal, home"><span>AP</span><strong>AKSHAT PORWAL</strong></Link>
-      <nav className={menuOpen ? "site-nav is-open" : "site-nav"} aria-label="Main navigation">
-        <Link href="/#work" onClick={() => setMenuOpen(false)}>Work</Link>
-        <Link href="/research" onClick={() => setMenuOpen(false)}>Research</Link>
-        <Link href="/#skills" onClick={() => setMenuOpen(false)}>Skills</Link>
-        <Link href="/#credentials" onClick={() => setMenuOpen(false)}>Credentials</Link>
-        <Link href="/#open-source" onClick={() => setMenuOpen(false)}>Open source</Link>
-        <a href={githubProfile} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>GitHub <GitBranch size={14} /></a>
-      </nav>
-      <div className="header-actions">
-        <button ref={themeButton} className="icon-button theme-toggle" type="button" onClick={toggleTheme} aria-label="Toggle colour theme"><span className="theme-icons" aria-hidden="true"><Sun size={18} /><Moon size={18} /></span></button>
-        <button className="icon-button menu-button" type="button" onClick={() => setMenuOpen((open) => !open)} aria-label={menuOpen ? "Close navigation" : "Open navigation"} aria-expanded={menuOpen}>{menuOpen ? <X size={20} /> : <Menu size={20} />}</button>
-      </div>
-    </header>
-  );
+  return <header className={`sugar-header ${pathname === "/" ? "on-room" : ""}`}>
+    <div className="sugar-brand"><Link href="/">akshat porwal</Link><p>Software Engineering<br />AI Systems<br />Learning Products<br />Research &amp; Open Source</p></div>
+    <div ref={panel} className={`sugar-menu ${open ? "is-open" : ""}`}>
+      <button ref={toggle} className="sugar-menu-toggle" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="portfolio-menu" onClick={() => setOpen(!open)}><span className="menu-dots" aria-hidden="true"><i /><i /><i /></span></button>
+      <nav id="portfolio-menu" aria-label="Main navigation" inert={!open}>{item("/", "Home")}{item("/about", "About")}<span className="menu-caption">Selected work</span>{projects.map((project, index) => <div key={project.slug}>{item(`/projects/${project.slug}`, `Case ${index + 1}`)}</div>)}{item("/projects", "All projects")}{item("/research", "Research")}<a href="mailto:akshatporwalwork@gmail.com" onClick={() => setOpen(false)}>Contact</a><MotionToggle /></nav>
+    </div>
+  </header>;
 }

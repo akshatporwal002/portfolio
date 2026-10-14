@@ -1,0 +1,87 @@
+:root { --motion-ease: cubic-bezier(.65, 0, .35, 1); --spring-ease: linear(0, .28, .62, .88, 1.03, 1.06, 1.025, 1); }
+.motion-shell { min-height: 100%; }
+.page-wipe { position: fixed; inset: 0; z-index: 200; background: var(--accent); transform: scaleY(0); transform-origin: bottom; pointer-events: none; }
+.sugar-menu, .sugar-menu.is-open { position: absolute; top: 0; right: 0; width: 212px; height: min(500px, calc(100svh - 48px)); min-height: 0; padding: 38px 32px 30px; background: none; box-shadow: none; pointer-events: none; }
+.sugar-menu::before { content: ''; position: absolute; inset: 0; background: var(--accent); border-radius: 28px; transform-origin: top right; transform: scale(.264, .112); opacity: 0; transition: transform .45s var(--motion-ease), opacity .2s; }
+.sugar-menu.is-open::before { transform: scale(1); opacity: 1; transition: transform .9s var(--spring-ease), opacity .1s; }
+.sugar-menu-toggle { pointer-events: auto; z-index: 2; }
+.sugar-menu nav { position: relative; visibility: hidden; pointer-events: none; max-height: calc(100svh - 128px); overflow-y: auto; }
+.sugar-menu.is-open nav { visibility: visible; pointer-events: auto; }
+.sugar-menu nav > * { opacity: 0; transform: translateY(8px); transition: opacity .2s ease-in, transform .2s ease-in; }
+.sugar-menu.is-open nav > * { opacity: 1; transform: translateY(0); transition: opacity .5s ease-out, transform .5s ease-out; transition-delay: calc(.15s + var(--menu-index, 0) * .04s); }
+.sugar-menu nav > :nth-child(2) { --menu-index: 1; }
+.sugar-menu nav > :nth-child(3) { --menu-index: 2; }
+.sugar-menu nav > :nth-child(4) { --menu-index: 3; }
+.sugar-menu nav > :nth-child(5) { --menu-index: 4; }
+.sugar-menu nav > :nth-child(6) { --menu-index: 5; }
+.sugar-menu nav > :nth-child(7) { --menu-index: 6; }
+.sugar-menu nav > :nth-child(8) { --menu-index: 7; }
+.sugar-menu nav > :nth-child(9) { --menu-index: 8; }
+.sugar-menu nav > :nth-child(10) { --menu-index: 9; }
+.sugar-menu nav > :nth-child(11) { --menu-index: 10; }
+.sugar-menu nav > :nth-child(12) { --menu-index: 11; }
+.sugar-menu .motion-toggle { color: var(--ink); text-align: left; }
+.menu-dots { display: block; position: relative; width: 24px; height: 24px; }
+.menu-dots i { position: absolute; left: 9px; top: 9px; transition: transform .65s var(--spring-ease), opacity .2s; }
+.menu-dots i:first-child { transform: translateY(-10px); }
+.menu-dots i:last-child { transform: translateY(10px); }
+.is-open .menu-dots i:first-child { transform: rotate(45deg) scaleX(4) scaleY(.5); }
+.is-open .menu-dots i:last-child { transform: rotate(-45deg) scaleX(4) scaleY(.5); }
+.is-open .menu-dots i:nth-child(2) { opacity: 0; transform: scale(0); }
+.room-home { display: block; overflow: clip; }
+.room-scene { width: 100%; height: 100svh; transition: transform 1s cubic-bezier(.22,1,.36,1); }
+.profile-open .room-scene { transform: translateX(-19.5%); }
+.profile-open .room-caption { left: calc(19.5% + 40px); }
+.profile-open .room-motion-toggle { right: calc(19.5% + 40px); }
+.hello-panel { position: absolute; top: 0; right: 0; width: 39%; height: 100svh; opacity: 0; visibility: hidden; transform: translateX(100%); transition: transform 1.25s var(--spring-ease), opacity .3s, visibility 1.25s; }
+.profile-open .hello-panel { transform: translateX(0); opacity: 1; visibility: visible; }
+.profile-open .hello-panel > * { animation: profile-copy .8s .3s both cubic-bezier(.22,1,.36,1); }
+.profile-open .hello-panel > :last-child { animation-delay: .45s; }
+.room-light { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 40% 60%, #fea83118, transparent 35%), radial-gradient(ellipse at 19% 63%, #9557ff24, transparent 27%); mix-blend-mode: screen; animation: room-glow 5s ease-in-out infinite alternate; }
+.room-greeting { position: absolute; top: 37%; left: 50%; width: 25%; height: 44%; background: transparent; border: 0; cursor: pointer; display: flex; align-items: flex-end; justify-content: center; padding: 0; }
+.room-greeting span { background: var(--accent); color: var(--ink); padding: 12px 20px; border-radius: 24px; font: 18px/1.4 var(--display); box-shadow: 0 5px 30px #0004; animation: hello-bob 3s ease-in-out infinite; }
+.is-awake .room-greeting { visibility: hidden; }
+.motion-toggle { background: none; border: 0; padding: 5px 0; font: 12px/1.5 var(--body); color: var(--muted); text-decoration: underline; cursor: pointer; }
+.room-motion-toggle { position: absolute; bottom: 22px; right: 40px; color: var(--paper); text-shadow: 0 1px 4px #000; }
+.gallery-index .motion-toggle { margin-bottom: 10px; text-align: right; }
+.gallery-word { width: max-content; }
+.marquee-track { display: flex; width: max-content; animation: gallery-marquee 32s linear infinite; animation-play-state: paused; }
+.is-current .marquee-track { animation-play-state: running; }
+.gallery-slide > h1, .gallery-slide > h2 { transition: transform .8s var(--motion-ease), opacity .5s; }
+.gallery-slide:not(.is-current):not(.gallery-contact) > h1, .gallery-slide:not(.is-current):not(.gallery-contact) > h2 { transform: translateY(35px); opacity: .25; }
+.gallery-slide .gallery-image, .gallery-slide .about-art { transition: transform 1.1s var(--spring-ease), opacity .45s; }
+.gallery-slide:not(.is-current):not(.gallery-contact) .gallery-image, .gallery-slide:not(.is-current):not(.gallery-contact) .about-art { transform: scale(.65); opacity: .35; }
+.gallery-summary { transition: transform .7s .12s ease-out, opacity .7s .12s; }
+.gallery-slide:not(.is-current):not(.gallery-contact) .gallery-summary { transform: translateY(12px); opacity: .35; }
+.gallery-case-link:hover .gallery-image, .about-art:hover { transform: scale(1.04) rotate(-1deg); }
+.big-link svg, .sugar-next svg { transition: transform .3s cubic-bezier(.22,1,.36,1); }
+.big-link:hover svg, .sugar-next:hover svg { transform: translate(5px,-5px); }
+.sugar-case-heading h1 { animation: heading-enter 1s cubic-bezier(.22,1,.36,1) both; }
+.sugar-prose-row, .sugar-case-image, .sugar-next { transition: opacity 1s ease-out, transform 1s cubic-bezier(.22,1,.36,1); }
+.reveal-pending { opacity: 0; transform: translateY(24px); }
+@keyframes profile-copy { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heading-enter { from { opacity: 0; transform: translateY(45px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes gallery-marquee { to { transform: translateX(-50%); } }
+@keyframes hello-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+@keyframes room-glow { from { opacity: .3; } to { opacity: 1; } }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.motion-paused *, .motion-paused *::before, .motion-paused *::after { animation-play-state: paused !important; transition-duration: 0s !important; transition-delay: 0s !important; }
+.motion-paused .sugar-case-heading h1, .motion-paused .hello-panel > * { animation: none; }
+.motion-paused .reveal-pending { opacity: 1; transform: none; }
+html:has(.motion-paused) { scroll-behavior: auto; }
+@media (max-width: 1100px) and (min-width: 801px) { .hello-panel { width: 45%; } .profile-open .room-scene { transform: translateX(-22.5%); } .profile-open .room-caption { left: calc(22.5% + 40px); } .profile-open .room-motion-toggle { right: calc(22.5% + 40px); } }
+@media (max-width: 800px) {
+  .room-scene { height: 100svh; min-height: 100svh; }
+  .profile-open .room-scene { height: 76svh; min-height: 76svh; transform: none; }
+  .hello-panel { display: none; position: relative; width: 100%; height: auto; }
+  .profile-open .hello-panel { display: flex; animation: profile-copy 1s cubic-bezier(.22,1,.36,1); }
+  .room-greeting { left: 42%; width: 48%; top: 38%; }
+  .room-greeting span { font-size: 16px; }
+  .room-motion-toggle { bottom: 54px; right: 20px; }
+  .profile-open .room-caption { left: 24px; }
+  .profile-open .room-motion-toggle { right: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page-wipe { display: none; }
+  .gallery-slide:not(.is-current) > h1, .gallery-slide:not(.is-current) > h2, .gallery-slide:not(.is-current) .gallery-image, .gallery-slide:not(.is-current) .about-art, .gallery-slide:not(.is-current) .gallery-summary, .reveal-pending { opacity: 1; transform: none; }
+}

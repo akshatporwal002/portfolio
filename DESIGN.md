@@ -1,38 +1,30 @@
-# Design system
+# Portfolio design
 
-## Visual world
-An editorial engineering notebook with the typographic character of Codeology: warm paper, precise rules, pixel display type, serif prose, monospace metadata, and a single signal-orange accent. It should feel authored and technical rather than like a generic dark developer dashboard.
+Reference: https://mildsugardesign.jp/ . Recreate its cream canvas, warm brown text, generous whitespace, rounded panels, orange accents, and expressive English typography using Akshat's content.
 
-## Type roles
-- Display: VT323 for names, section titles, project titles, and short statements.
-- Reading: Source Serif 4 for descriptions and case-study prose.
-- Interface: JetBrains Mono for navigation, metadata, buttons, dates, and code-adjacent labels.
-- Ordinary body copy remains at 16px or larger; compact metadata remains at 12px or larger with sufficient contrast.
-- Long-form prose stays between 45ch and 72ch.
+## Typography and colour
 
-## Colour
-- Paper and ink are the dominant pair in both themes.
-- Orange is a signal for actions, state, and authored marks—not a blanket decoration.
-- Muted text must still meet WCAG AA for its actual size.
-- Borders stay quiet and structural.
+- Righteous regular: headings, brand, navigation, large links.
+- LINE Seed JP regular and bold: body text and supporting labels.
+- Both are self-hosted Latin WOFF2 subsets through next/font/local, with OFL licenses in public/fonts.
+- Cream #f7f5f1; ink #3c3728; orange #fea831. Use dark ink on orange labels for legibility.
 
-## Layout
-- Maximum canvas: 1240px with fluid side gutters.
-- Homepage reading order: proposition → selected work → capability → public evidence → contact.
-- Case studies use a narrow reading column supported by a compact project index and evidence rail.
-- Spacing uses a 4px base with deliberate jumps between related and unrelated groups.
+## Pages
 
-## Components
-- Project cards are editorial panels, not floating rounded tiles.
-- Hover may add a local spotlight, a small perspective response, and directional link movement; the card remains fully legible at rest.
-- The theme toggle uses a radial view-transition reveal originating at the button, with an immediate fallback when unsupported.
-- Contribution entries use a chronological rule and state marks, with links to the original GitHub artifact.
-- Focus states are always visible and never depend on hover.
+- Home: full-height pixel bedroom scene and cream introduction panel, 61/39 desktop split; stacked on mobile.
+- Projects: static full-height gallery sections with oversized orange lettering, central rounded previews, descriptions, category labels, and section navigation. No scroll interception.
+- Project details: broad heading, narrow 680px body, labels beside prose on desktop and stacked on mobile, screenshots, repositories, outcomes, and next-project navigation.
+- About: personal introduction, education, capabilities, and research link.
+- Research: existing content retained with shared fonts, palette, and navigation.
 
-## Motion
-- Personality: premium paper—controlled, tactile, no bounce.
-- Signature easing: `cubic-bezier(0.16, 1, 0.3, 1)`.
-- Durations: 120ms quick, 240ms standard, 450ms reveal.
-- Entrances use short opacity/translate reveals; interactive feedback is under 250ms.
-- Reduced motion removes perspective, radial expansion, and displacement while preserving colour, focus, and short opacity feedback.
+## Artwork and motion
 
+public/art/pixel-room.png is original static pixel artwork made with the built-in image tool, using the user's portrait and bedroom photos as references. It shows Akshat at his desk with a warm lamp, violet computer lighting, and cream bedding. Source photos are not shipped.
+
+Motion follows the captured reference: 600ms orange cover/uncover page wipes; 900ms elastic menu expansion with staggered links; continuous gallery lettering at approximately 90px/second; 800ms title movement, 1100ms project image entrance, and 700ms supporting-copy reveals. Home opens on the full room and reveals the profile on greeting. Case prose and images reveal on scroll. Ambient room glow is a CSS overlay; the character remains a static illustration pending sprite frames.
+
+Pause motion controls are available in the room, gallery, and global menu. System reduced-motion disables the wipe, marquee, entrances, and smooth scrolling. Menu focus looping, Escape dismissal, ordinary links, modified-click behavior, and route focus remain functional.
+
+## Reference capture
+
+scripts/capture-reference.py saves bounded public HTML pages and first-party CSS/JS to design-reference/mildsugar/. The archive is ignored by Git and ESLint and never served or imported. See design-reference/README.md.
