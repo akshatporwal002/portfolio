@@ -80,3 +80,5 @@ html:has(.motion-paused) { scroll-behavior: auto; }
 .sugar-menu nav::-webkit-scrollbar { width:6px; background:var(--accent); }
 .sugar-menu nav::-webkit-scrollbar-track, .sugar-menu nav::-webkit-scrollbar-corner { background:var(--accent); }
 .sugar-menu nav::-webkit-scrollbar-thumb { background:#66451e; border:1px solid var(--accent); border-radius:8px; }
+
+.sugar-menu nav a:focus-visible { outline:none; border-radius:8px; background:rgb(255 255 255 / 18%); }
