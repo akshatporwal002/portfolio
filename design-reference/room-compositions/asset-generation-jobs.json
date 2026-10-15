@@ -1,0 +1,86 @@
+[
+  {
+    "id": "walls",
+    "folder": "surfaces",
+    "transparent": false,
+    "prompt": "Extract and reconstruct ONLY the bare painted walls of the supplied pixel-art bedroom. Remove all furniture, objects, shelf, plants, window, curtains, frames, trim, floor and ceiling, including their shadows and lamp/PC light pools. Fill all previously obscured wall areas with coherent detailed warm umber painted pixel texture, darker at left and gently warmer at right from neutral ambient light only. Produce an extra-wide and extra-tall continuous wall texture extending generously beyond the original boundaries; no top/bottom floor or ceiling boundary, no skirting, no decorations, no text. Retain a subtle front-wall/right-wall corner near the far right, preserving room perspective. High quality consistent with the reference, opaque background. This is the editable walls-only background, every other visible element will be a separate asset.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-a9d39230-132d-4aca-97eb-f2fe0fc9acd0.png"
+  },
+  {
+    "id": "desktop",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the bare desk tabletop only, a narrow cream/wood desktop in the reference camera perspective, complete left and right edges, amber lighting to right and subtle violet tint to left. No legs, drawers, monitor, PC, character, chair, lanyard or any desktop props. A solid tabletop with its front edge and thickness visible.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6cc31cff-8def-47e5-a2a4-f9016cd2642e.png"
+  },
+  {
+    "id": "pc",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the complete RGB PC tower from the left side of the desk, including chassis and visible internal hardware, violet fan rings and transparent side panel as seen in reference. Standing square, not diagonal to desktop. Preserve the slightly visible right/front face. No desk, cables trailing outside silhouette or surrounding violet light spill; fan illumination inside the case is retained.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e4591263-0084-4d3b-8a89-87e10f8c0328.png"
+  },
+  {
+    "id": "monitor",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the computer monitor display/body only, preserving the front view with slight perspective and dark frame, its blue/dark editor screen showing tiny abstract code lines, no readable text. Do NOT include its pedestal or stand: screen and frame only, complete clean silhouette.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-07129412-567c-4dac-95a9-31d12ffb04cb.png"
+  },
+  {
+    "id": "character",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Seated Akshat alone in the exact pose from reference, dark tousled hair, round gold glasses, beard, charcoal shirt, arms at desk, legs and slippers complete. No chair/desk/props/shadows. Preserve identity and original smaller full body proportions.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cd860333-1673-4825-8b3c-d801fe704019.png"
+  },
+  {
+    "id": "chair-back",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Black ergonomic mesh chair BACKREST only including headrest; reference angle viewed behind and left, reconstruct concealed parts. No seat, armrests, base or person.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-ad20a2fe-9808-43bc-82df-63e47dc86349.png"
+  },
+  {
+    "id": "chair-seat",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Black ergonomic chair SEAT cushion only in reference rear left perspective, no backrest/arms/person/base.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-fcd720a1-21d7-45f5-a8b8-d2bc1449b11c.png"
+  },
+  {
+    "id": "chair-arm",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One black ergonomic chair armrest with support matching visible left armrest, reference angle, no other chair parts. Reusable mirrored instance for other side.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-b67fb5f7-554e-46f3-86c1-ea6a21f5e7f8.png"
+  },
+  {
+    "id": "chair-base",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Complete five star black office chair wheel base and central stem, reference perspective. No seat/backrest/person or floor shadow.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-41f5daf4-4656-4389-b89a-628d675e608c.png"
+  },
+  {
+    "id": "shelf",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only the long warm wooden front-wall shelf BOARD, reference front slight low angle, complete thickness. No brackets/books/plants or shadows.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-24921f63-4c34-4684-8431-ff82182de907.png"
+  },
+  {
+    "id": "shelf-bracket",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One dark metal triangular shelf support bracket from reference, front wall camera perspective. No shelf or wall. Reusable two instances.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-0fe591c4-ce86-40b4-ac44-593a166419d8.png"
+  },
+  {
+    "id": "desk-leg",
+    "folder": "objects",
+    "transparent": true,
+    "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One complete right table leg/support from cream wooden desk, reference perspective, full foot to top. No tabletop or shadow.",
+    "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-46dc3842-3b1b-4792-b810-5a972793a6e9.png"
+  }
+]

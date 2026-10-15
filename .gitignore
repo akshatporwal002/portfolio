@@ -43,3 +43,6 @@ next-env.d.ts
 
 # Downloaded third-party inspection material; never bundled into the app.
 /design-reference/mildsugar/
+
+# Local working scratch files
+/tmp/

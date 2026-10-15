@@ -1,0 +1,509 @@
+{
+  "commonPrompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: ",
+  "additionalJobs": [
+    {
+      "id": "walls",
+      "folder": "surfaces",
+      "transparent": false,
+      "prompt": "Extract and reconstruct ONLY the bare painted walls of the supplied pixel-art bedroom. Remove all furniture, objects, shelf, plants, window, curtains, frames, trim, floor and ceiling, including their shadows and lamp/PC light pools. Fill all previously obscured wall areas with coherent detailed warm umber painted pixel texture, darker at left and gently warmer at right from neutral ambient light only. Produce an extra-wide and extra-tall continuous wall texture extending generously beyond the original boundaries; no top/bottom floor or ceiling boundary, no skirting, no decorations, no text. Retain a subtle front-wall/right-wall corner near the far right, preserving room perspective. High quality consistent with the reference, opaque background. This is the editable walls-only background, every other visible element will be a separate asset."
+    },
+    {
+      "id": "desktop",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the bare desk tabletop only, a narrow cream/wood desktop in the reference camera perspective, complete left and right edges, amber lighting to right and subtle violet tint to left. No legs, drawers, monitor, PC, character, chair, lanyard or any desktop props. A solid tabletop with its front edge and thickness visible."
+    },
+    {
+      "id": "pc",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the complete RGB PC tower from the left side of the desk, including chassis and visible internal hardware, violet fan rings and transparent side panel as seen in reference. Standing square, not diagonal to desktop. Preserve the slightly visible right/front face. No desk, cables trailing outside silhouette or surrounding violet light spill; fan illumination inside the case is retained."
+    },
+    {
+      "id": "monitor",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the computer monitor display/body only, preserving the front view with slight perspective and dark frame, its blue/dark editor screen showing tiny abstract code lines, no readable text. Do NOT include its pedestal or stand: screen and frame only, complete clean silhouette."
+    },
+    {
+      "id": "keyboard",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only mechanical keyboard from desk, cream keys dark case reference desk perspective, no hands/cables/shadow."
+    },
+    {
+      "id": "mouse",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only black computer mouse from desk, reference oblique top view, no hand/cable/shadow."
+    },
+    {
+      "id": "monitor-stand",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only monitor pedestal stand including narrow central support and broad foot, matching reference angle. No screen/desk/cable."
+    },
+    {
+      "id": "lamp-base",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only round brass base of desk lamp, reference tabletop perspective, no lamparm/shade/bulb/shadow."
+    },
+    {
+      "id": "lamp-arm",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only thin angled brass desk lamp stem/arm from reference, full stand top to base attachment, no base/shade/bulb/glow."
+    },
+    {
+      "id": "lamp-shade",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only small brass desk lamp shade tilted down left as reference, dark inner cavity unlit, no arm/base/bulb or lightspill."
+    },
+    {
+      "id": "bottle",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only slim metal waterbottle near lamp from reference, copper charcoal body and cap, no lamp/desk/shadow."
+    },
+    {
+      "id": "tablet",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only thin black tablet lying on desk left side, reference flat oblique perspective, violet glass reflection, no other objects."
+    },
+    {
+      "id": "stationery-cup",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only wooden stationery cup from desk left, empty opening, no pencils/pens/other objects."
+    },
+    {
+      "id": "pencil",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One wooden yellow pencil with graphite tip, vertical slightly angled suitable for stationery cup, detailed pixel art. No cup. Reusable independent instances."
+    },
+    {
+      "id": "pen",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One dark charcoal pen, vertical slightly angled suitable for stationery cup, detailed pixel art. No cup. Reusable independent instances."
+    },
+    {
+      "id": "speaker",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only small cream cube speaker from desk near lamp, reference angle, no table/lamp/shadow."
+    },
+    {
+      "id": "walls",
+      "folder": "surfaces",
+      "transparent": false,
+      "prompt": "Extract and reconstruct ONLY the bare painted walls of the supplied pixel-art bedroom. Remove all furniture, objects, shelf, plants, window, curtains, frames, trim, floor and ceiling, including their shadows and lamp/PC light pools. Fill all previously obscured wall areas with coherent detailed warm umber painted pixel texture, darker at left and gently warmer at right from neutral ambient light only. Produce an extra-wide and extra-tall continuous wall texture extending generously beyond the original boundaries; no top/bottom floor or ceiling boundary, no skirting, no decorations, no text. Retain a subtle front-wall/right-wall corner near the far right, preserving room perspective. High quality consistent with the reference, opaque background. This is the editable walls-only background, every other visible element will be a separate asset."
+    },
+    {
+      "id": "desktop",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the bare desk tabletop only, a narrow cream/wood desktop in the reference camera perspective, complete left and right edges, amber lighting to right and subtle violet tint to left. No legs, drawers, monitor, PC, character, chair, lanyard or any desktop props. A solid tabletop with its front edge and thickness visible."
+    },
+    {
+      "id": "pc",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the complete RGB PC tower from the left side of the desk, including chassis and visible internal hardware, violet fan rings and transparent side panel as seen in reference. Standing square, not diagonal to desktop. Preserve the slightly visible right/front face. No desk, cables trailing outside silhouette or surrounding violet light spill; fan illumination inside the case is retained."
+    },
+    {
+      "id": "monitor",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: the computer monitor display/body only, preserving the front view with slight perspective and dark frame, its blue/dark editor screen showing tiny abstract code lines, no readable text. Do NOT include its pedestal or stand: screen and frame only, complete clean silhouette."
+    },
+    {
+      "id": "window-frame",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only dark wooden window frame including sill and mullions from left of room, full rectangular opening transparent. No glass, curtains, rail, outside or wall."
+    },
+    {
+      "id": "window-view",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only the blue violet night cityscape through window, flat rectangular view with tiny warm city windows, stars, no window frame/curtains."
+    },
+    {
+      "id": "curtain-left",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One LEFT softly pleated warm beige curtain from reference, full length hanging fabric, no rail/window or castshadow."
+    },
+    {
+      "id": "curtain-right",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: One RIGHT softly pleated warm beige curtain from reference, full length hanging fabric, no rail/window or castshadow."
+    },
+    {
+      "id": "curtain-rail",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only dark wooden/metal curtain rail with wallmounts, long horizontal rod from room reference. No fabric or wall."
+    },
+    {
+      "id": "plant-foliage",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only foliage of tall leafy green plant near window left desk: complete leaves stems trailing vines, base stems available for insertion into separate pot. No pot/window/furniture."
+    },
+    {
+      "id": "plant-pot",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only the cream cylindrical floor plant pot near window, no foliage. Opening and rim visible."
+    },
+    {
+      "id": "shelf-foliage",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only trailing leafy green shelf plant foliage, dense crown and hanging vines from reference top shelf. No pot/shelf/shadow."
+    },
+    {
+      "id": "shelf-pot",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only the small cream ceramic pot of trailing shelf plant, no plant or shelf."
+    },
+    {
+      "id": "rug",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only warm woven rectangular floor rug under chair, reference perspective, fringed edge, no chair/person/furniture/shadows."
+    },
+    {
+      "id": "pc-fan-light",
+      "folder": "lights",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only one luminous violet circular PC RGB fan ring as an overlay, transparent hole and background, no case/internal hardware. Crisp pixel ring and restrained alpha halo."
+    },
+    {
+      "id": "pc-glass",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only transparent tinted glass sidepanel of the RGB PC, rectangular reference perspective, slim black border, subtle faint violet/amber reflections on otherwise transparent glass. No case/fans/hardware."
+    },
+    {
+      "id": "monitor-cable",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only one thin dark curved monitor cable with connector, hanging naturally from back monitor down to desk, pixelart reference, no screen/stand/table."
+    },
+    {
+      "id": "ceiling-trim",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only long dark wooden ceiling trim/cornice strip from top of room, front wall perspective, no ceiling/wall/shadow."
+    },
+    {
+      "id": "bedside-foliage",
+      "folder": "objects",
+      "transparent": true,
+      "prompt": "Use the supplied pixel-art room as the exact style, palette, lighting and camera reference. Create ONE isolated production asset only, not an asset sheet. Preserve crisp detailed square pixel clusters, dark outlines, amber self-shading and violet edge accents appropriate to the object. Reconstruct hidden parts naturally while preserving the reference object's design and perspective. Center the complete asset with modest transparent padding and do not crop any part. No scene, no floor, no wall, no other props, no labels, no readable text, no watermark, no baked-in cast or contact shadow outside the silhouette. Internal self-shading stays. TRUE transparent alpha background; do not paint a checkerboard. Asset to isolate: Only the leafy green small plant visible at far right beside bed, complete leaves and stems reconstructed from partial edge in reference, no pot/bed/wall."
+    }
+  ],
+  "repairs": [
+    {
+      "id": "floor",
+      "folder": "surfaces",
+      "transparent": false,
+      "prompt": "Create a FULL BLEED opaque rectangular warm dark wood plank floor texture matching the pixel art room reference. Wood must cover EVERY pixel edge to edge. No checkerboard, no transparent area, no trapezoid cutout, no margin, no objects, no rug, no glow or localized light pools. Wide horizontal plank arrangement perspective viewed slightly from above, detailed pixel wood grain. Neutral dim warm umber ambient lighting only. This is an extended room floor surface.",
+      "ref": "C:/Users/aoswa/OneDrive/Documents/Projects/Portfolio/design-reference/room-compositions/desktop-v2.png"
+    },
+    {
+      "id": "curtain-left",
+      "folder": "objects",
+      "transparent": true,
+      "ref": "C:/Users/aoswa/OneDrive/Documents/Projects/Portfolio/public/art/layered-room/objects/curtain-left.png",
+      "prompt": "Edit this curtain cutout to remove ALL violet and amber light spill outside its fabric silhouette. Preserve exact fabric pixels, folds, perspective and internal shading. Everything outside fabric MUST have zero alpha. No shadow, glow, floor, backdrop or checkerboard. One crisp detailed pixel art curtain isolated on TRUE transparency."
+    },
+    {
+      "id": "curtain-right",
+      "folder": "objects",
+      "transparent": true,
+      "ref": "C:/Users/aoswa/OneDrive/Documents/Projects/Portfolio/public/art/layered-room/objects/curtain-right.png",
+      "prompt": "Edit this curtain cutout to remove ALL violet and amber light spill outside its fabric silhouette. Preserve exact fabric pixels, folds, perspective and internal shading. Everything outside fabric MUST have zero alpha. No shadow, glow, floor, backdrop or checkerboard. One crisp detailed pixel art curtain isolated on TRUE transparency."
+    }
+  ],
+  "bedFrameRepair": "Edit this isolated bed-frame asset ONLY to remove the faint amber and violet glow outside the wooden silhouette. Keep the bed frame pixels, design, perspective and internal self shading exactly unchanged. Outside silhouette must be completely transparent with NO shadow, NO glow, NO backdrop. This is an object layer whose shadows and illumination are separate.",
+  "assetSources": [
+    {
+      "id": "walls",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-a9d39230-132d-4aca-97eb-f2fe0fc9acd0.png"
+    },
+    {
+      "id": "desktop",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6cc31cff-8def-47e5-a2a4-f9016cd2642e.png"
+    },
+    {
+      "id": "pc",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e4591263-0084-4d3b-8a89-87e10f8c0328.png"
+    },
+    {
+      "id": "monitor",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-07129412-567c-4dac-95a9-31d12ffb04cb.png"
+    },
+    {
+      "id": "floor",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-2980a495-6f7e-4072-9136-4514e33d537a.png"
+    },
+    {
+      "id": "ceiling",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e13c58ec-2e5d-427d-97d5-6f7e3740dbec.png"
+    },
+    {
+      "id": "bed-frame",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-59fef30d-a68a-404c-be07-5d5bcd3328a7.png"
+    },
+    {
+      "id": "mattress",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6c27b3f3-b101-4a9a-8fdd-795bd9d852e3.png"
+    },
+    {
+      "id": "duvet",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-f0578a85-b0da-48ff-9fbf-fbd22f75bbff.png"
+    },
+    {
+      "id": "pillow",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-febeb69f-7b9b-4d5a-ad95-2102edef5690.png"
+    },
+    {
+      "id": "cabinet",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-d068bc5a-67d5-42a2-ab50-e74d49c2737b.png"
+    },
+    {
+      "id": "drawer",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-8613a5bd-ab17-41fe-8785-7b2db4715698.png"
+    },
+    {
+      "id": "character",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cd860333-1673-4825-8b3c-d801fe704019.png"
+    },
+    {
+      "id": "chair-back",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-ad20a2fe-9808-43bc-82df-63e47dc86349.png"
+    },
+    {
+      "id": "chair-seat",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-fcd720a1-21d7-45f5-a8b8-d2bc1449b11c.png"
+    },
+    {
+      "id": "chair-arm",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-b67fb5f7-554e-46f3-86c1-ea6a21f5e7f8.png"
+    },
+    {
+      "id": "chair-base",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-41f5daf4-4656-4389-b89a-628d675e608c.png"
+    },
+    {
+      "id": "shelf",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-24921f63-4c34-4684-8431-ff82182de907.png"
+    },
+    {
+      "id": "shelf-bracket",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-0fe591c4-ce86-40b4-ac44-593a166419d8.png"
+    },
+    {
+      "id": "desk-leg",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-46dc3842-3b1b-4792-b810-5a972793a6e9.png"
+    },
+    {
+      "id": "window-frame",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-29baaf7e-b3cd-463e-b9d7-dfab1563b080.png"
+    },
+    {
+      "id": "window-view",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-b0771671-b414-4c4f-abcb-55ba486f83cd.png"
+    },
+    {
+      "id": "curtain-left",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-957bb2ed-a39d-4d98-a211-1df263a106c9.png"
+    },
+    {
+      "id": "curtain-right",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-7fbeee33-1a62-4c28-9943-fa34a8969d32.png"
+    },
+    {
+      "id": "curtain-rail",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-ab36a38c-6487-40ac-bed7-f3db262cb777.png"
+    },
+    {
+      "id": "plant-foliage",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cb10dfc8-76dd-43f9-a334-de6b489facb4.png"
+    },
+    {
+      "id": "plant-pot",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-4af0abbd-8e94-41a0-ae46-8c874f2a65a2.png"
+    },
+    {
+      "id": "shelf-foliage",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cdd296ab-e858-4780-8551-c295d585a854.png"
+    },
+    {
+      "id": "shelf-pot",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-bf02c8b0-cf6d-4131-ac89-9404ab8cac0c.png"
+    },
+    {
+      "id": "rug",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-1ecc491d-7003-4db5-99b3-ee20266a2bb0.png"
+    },
+    {
+      "id": "keyboard",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-2a9e852c-5df4-4f39-afb8-bc16d6d6dd81.png"
+    },
+    {
+      "id": "mouse",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-32c26402-9601-413c-9713-a895f09dfd40.png"
+    },
+    {
+      "id": "monitor-stand",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-1d0f47c9-2131-4fc7-87e7-3f4bb65900c8.png"
+    },
+    {
+      "id": "lamp-base",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-4ae4b9cf-6499-458c-b80c-3a189dac672a.png"
+    },
+    {
+      "id": "lamp-arm",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cf8eb661-c895-4dfb-861b-0ad4b67e91fb.png"
+    },
+    {
+      "id": "lamp-shade",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6b86e651-be03-48ed-8dbd-45a3e3122838.png"
+    },
+    {
+      "id": "bottle",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-d826c293-1740-4cd9-9426-03577b567e39.png"
+    },
+    {
+      "id": "tablet",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-5dfbbd87-51a1-4316-889e-aa302373dfe2.png"
+    },
+    {
+      "id": "stationery-cup",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-8fdc1123-c140-4825-bc82-215519954f80.png"
+    },
+    {
+      "id": "pencil",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-d23c6a85-c8d6-4983-9051-de57199169d6.png"
+    },
+    {
+      "id": "pen",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e0eee811-4478-483f-aa78-38837ea5ff1b.png"
+    },
+    {
+      "id": "speaker",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-114fc974-1a01-4d59-9758-e2cf21bffadb.png"
+    },
+    {
+      "id": "book-blue",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-66967312-fb0c-4136-b33e-3e46a3433501.png"
+    },
+    {
+      "id": "book-amber",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-bbb5bbdb-8213-492d-8a4e-6b362c2f6bb2.png"
+    },
+    {
+      "id": "book-cream",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-2479c9f6-05b4-4983-97b2-49df7d7aef60.png"
+    },
+    {
+      "id": "book-flat",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e96fea0f-8e33-45a2-b2fa-7d4d379755e2.png"
+    },
+    {
+      "id": "frame",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-215a98d1-0573-40be-94fb-2aeff3a055af.png"
+    },
+    {
+      "id": "artwork",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-dff203de-1725-45d7-a678-91b7250e3600.png"
+    },
+    {
+      "id": "lanyard",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-ee2bc64d-8db6-4bcb-a5e0-eeec73d66c6b.png"
+    },
+    {
+      "id": "id-holder",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-3d99c2a2-a1fa-45a3-bab6-277c256e4286.png"
+    },
+    {
+      "id": "id-insert",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-7aaebc2e-51ca-4c9d-91e6-fba378586a89.png"
+    },
+    {
+      "id": "sheet",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-7278af18-ce71-4474-ab40-d36d463aa9eb.png"
+    },
+    {
+      "id": "trim",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-061022c7-1322-46ff-8808-a51984cb3b89.png"
+    },
+    {
+      "id": "drawer-handle",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-1a2524bd-74e2-4733-b9ce-0f3ea29abc95.png"
+    },
+    {
+      "id": "lamp-wall",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6b0c413b-8f2a-45d6-82ea-b72f1d2ebd04.png"
+    },
+    {
+      "id": "pc-spill",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-6edf533b-2024-4d3b-986c-3517f9131b5a.png"
+    },
+    {
+      "id": "window-light",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-404f16c8-3dd4-4c1e-b694-46d0b2eccdbf.png"
+    },
+    {
+      "id": "lamp-bulb",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-db3d6fc7-fbb6-474c-afd5-158050a0ad2d.png"
+    },
+    {
+      "id": "desk-contact",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-83397a95-7aa7-47bc-83fb-4398b21b89e3.png"
+    },
+    {
+      "id": "chair-contact",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-bd8b2219-4118-421a-a57c-eaf94e367087.png"
+    },
+    {
+      "id": "bed-contact",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-75b676e4-e2e0-4b10-bb03-6cef33f28b56.png"
+    },
+    {
+      "id": "shelf-cast",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-dbaf83bf-c182-48d1-a7d1-0bd92f4ae8e2.png"
+    },
+    {
+      "id": "pc-fan-light",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-4885dbac-6102-4279-bdfb-be6a96876e6c.png"
+    },
+    {
+      "id": "pc-glass",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-e21a78fe-cb74-422b-860c-91627ab2f505.png"
+    },
+    {
+      "id": "monitor-cable",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-c966cba5-70f8-4d66-b4ff-f7ab8e958616.png"
+    },
+    {
+      "id": "ceiling-trim",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-cebde226-2936-4234-b1ca-8cd5a1f95279.png"
+    },
+    {
+      "id": "bedside-foliage",
+      "source": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-051d06b6-14b4-4bed-8e78-546e3cc0673d.png"
+    }
+  ]
+}

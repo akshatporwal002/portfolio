@@ -1,0 +1,29 @@
+{
+  "phase": "assembled-local",
+  "generator": "built-in image_gen",
+  "layered_assets_created": true,
+  "compositions": [
+    {
+      "file": "desktop-v1.png",
+      "width": 1586,
+      "height": 992,
+      "lamp": "on for lighting review",
+      "type": "flattened composition reference"
+    },
+    {
+      "file": "phone-v1.png",
+      "width": 852,
+      "height": 1846,
+      "lamp": "on for lighting review",
+      "type": "flattened composition reference"
+    },
+    {
+      "file": "desktop-v2.png",
+      "width": 1586,
+      "height": 992,
+      "lamp": "on for lighting review",
+      "type": "bed moved beside desk"
+    }
+  ],
+  "live_scene_implemented": true
+}

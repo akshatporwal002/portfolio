@@ -1,8 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import "./sugar.css";
 import "./motion.css";
+import "./room.css";
+import "./layered-room.css";
 import { PortfolioMotion } from "./portfolio-motion";
 
 const displayFont = localFont({ src: "../../public/fonts/righteous-1.woff2", variable: "--font-righteous", weight: "400", display: "swap" });
@@ -11,8 +13,10 @@ const bodyFont = localFont({ src: [{ path: "../../public/fonts/line-seed-jp-123.
 export const metadata: Metadata = {
   title: "Akshat Porwal — Software Engineer",
   description:
-    "Akshat Porwal builds AI systems, developer tools, and open-source engineering education.",
+    "Akshat Porwal builds applied AI systems, cloud infrastructure, and fintech products. Software Engineering and Commerce student at Monash University.",
 };
+
+export const viewport: Viewport = { width: "device-width", initialScale: 1, viewportFit: "cover", themeColor: "#261b26" };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (

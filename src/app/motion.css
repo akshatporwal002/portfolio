@@ -1,28 +1,18 @@
 :root { --motion-ease: cubic-bezier(.65, 0, .35, 1); --spring-ease: linear(0, .28, .62, .88, 1.03, 1.06, 1.025, 1); }
 .motion-shell { min-height: 100%; }
 .page-wipe { position: fixed; inset: 0; z-index: 200; background: var(--accent); transform: scaleY(0); transform-origin: bottom; pointer-events: none; }
-.sugar-menu, .sugar-menu.is-open { position: absolute; top: 0; right: 0; width: 212px; height: min(500px, calc(100svh - 48px)); min-height: 0; padding: 38px 32px 30px; background: none; box-shadow: none; pointer-events: none; }
-.sugar-menu::before { content: ''; position: absolute; inset: 0; background: var(--accent); border-radius: 28px; transform-origin: top right; transform: scale(.264, .112); opacity: 0; transition: transform .45s var(--motion-ease), opacity .2s; }
-.sugar-menu.is-open::before { transform: scale(1); opacity: 1; transition: transform .9s var(--spring-ease), opacity .1s; }
-.sugar-menu-toggle { pointer-events: auto; z-index: 2; }
-.sugar-menu nav { position: relative; visibility: hidden; pointer-events: none; max-height: calc(100svh - 128px); overflow-y: auto; }
-.sugar-menu.is-open nav { visibility: visible; pointer-events: auto; }
-.sugar-menu nav > * { opacity: 0; transform: translateY(8px); transition: opacity .2s ease-in, transform .2s ease-in; }
-.sugar-menu.is-open nav > * { opacity: 1; transform: translateY(0); transition: opacity .5s ease-out, transform .5s ease-out; transition-delay: calc(.15s + var(--menu-index, 0) * .04s); }
-.sugar-menu nav > :nth-child(2) { --menu-index: 1; }
-.sugar-menu nav > :nth-child(3) { --menu-index: 2; }
-.sugar-menu nav > :nth-child(4) { --menu-index: 3; }
-.sugar-menu nav > :nth-child(5) { --menu-index: 4; }
-.sugar-menu nav > :nth-child(6) { --menu-index: 5; }
-.sugar-menu nav > :nth-child(7) { --menu-index: 6; }
-.sugar-menu nav > :nth-child(8) { --menu-index: 7; }
-.sugar-menu nav > :nth-child(9) { --menu-index: 8; }
-.sugar-menu nav > :nth-child(10) { --menu-index: 9; }
-.sugar-menu nav > :nth-child(11) { --menu-index: 10; }
-.sugar-menu nav > :nth-child(12) { --menu-index: 11; }
+.sugar-menu, .sugar-menu.is-open { position:absolute; top:0; right:0; width:min(260px,calc(100vw - 40px)); height:auto; min-height:56px; max-height:calc(100dvh - 48px - env(safe-area-inset-bottom)); padding:56px 24px 20px; background:none; box-shadow:none; pointer-events:none; display:flex; flex-direction:column; }
+.sugar-menu::before { content:''; position:absolute; inset:0; background:var(--accent); border-radius:28px; transform-origin:top right; transform:scale(.215,.14); opacity:0; transition:transform .18s var(--motion-ease),opacity .12s; }
+.sugar-menu.is-open::before { transform:scale(1); opacity:1; transition:transform .24s var(--motion-ease),opacity .1s; }
+.sugar-menu-toggle { pointer-events:auto; z-index:2; }
+.sugar-menu nav { position:relative; visibility:hidden; pointer-events:none; overflow-y:auto; min-height:0; padding-top:0; gap:2px; }
+.sugar-menu.is-open nav { visibility:visible; pointer-events:auto; }
+.sugar-menu nav a { flex-shrink:0; min-height:44px; padding:10px 8px; line-height:1.4; overflow-wrap:anywhere; }
+.sugar-menu nav > * { opacity:0; transform:translateY(4px); transition:opacity .12s,transform .12s; }
+.sugar-menu.is-open nav > * { opacity:1; transform:translateY(0); transition:opacity .18s,transform .18s; transition-delay:.04s; }
 .sugar-menu .motion-toggle { color: var(--ink); text-align: left; }
 .menu-dots { display: block; position: relative; width: 24px; height: 24px; }
-.menu-dots i { position: absolute; left: 9px; top: 9px; transition: transform .65s var(--spring-ease), opacity .2s; }
+.menu-dots i { position: absolute; left: 9px; top: 9px; transition: transform .2s var(--motion-ease), opacity .2s; }
 .menu-dots i:first-child { transform: translateY(-10px); }
 .menu-dots i:last-child { transform: translateY(10px); }
 .is-open .menu-dots i:first-child { transform: rotate(45deg) scaleX(4) scaleY(.5); }

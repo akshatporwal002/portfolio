@@ -28,3 +28,9 @@ Built-in image generation produced public/art/pixel-room.png. Prompt: original s
 npm run lint; npm run build -- --webpack. Turbopack's local process connection failed on this machine. Browser verification covers desktop/mobile home, expanded menu, section navigation, project links, about, and research.
 
 Animation verification: profile click on desktop/mobile; orange wipe navigation and released pointer events; menu focus and Escape; pause control stops marquee; paused case navigation; mobile overflow check.
+
+## Room artwork revision
+
+Built-in image editing used the existing scene as its reference. Final prompt: preserve framing, character, monitor, lamp and shelves; align the PC square to the desk, move the water bottle beside the lamp, remove circular desktop clutter below the monitor, neaten bedding, and add a cream ID card in a dark holder with an orange lanyard hanging from the front desk edge. Preserve pixel style, omit annotations and readable card text. Output: public/art/pixel-room-v2.png.
+
+Verified: lamp off/on, white focus highlight, ID-card CV link, PC research link, monitor projects link, bookshelf credential link, desktop CV layout, mobile room shortcuts, and mobile CV overflow.

@@ -1,0 +1,2181 @@
+{
+  "version": 1,
+  "phase": "assembled-local",
+  "reference": "/design-reference/room-compositions/desktop-v2.png",
+  "generator": "built-in image_gen",
+  "assetCount": 75,
+  "liveSceneImplemented": true,
+  "layoutSource": "src/data/room-layout.ts",
+  "renderer": "src/app/pixel-room.tsx",
+  "deployed": false,
+  "layout": {
+    "bed": "immediately beside right end of desk; progressively crop on narrow screens",
+    "walls": "extended bare surface; floor and ceiling positioned separately",
+    "responsive": "continuous group interpolation; workspace always visible"
+  },
+  "notes": [
+    "Source PNGs preserve generated detail and internal self shading. Use SVG silhouette masks to exclude residual soft external glow.",
+    "Cast SVGs are independent alpha-derived silhouettes; receiving-surface projection and intensity require adjustment in the assembled scene.",
+    "Bed, cupboard, complete plants, lanyard with badge and seated character with chair are each consolidated PNG sprites. Earlier component masters are retained for reference; only assets named in room-layout.ts are rendered.",
+    "PC chassis contains internal hardware; glass and fan effects are optional overlays, not a fully exploded internal computer.",
+    "Source art is unoptimized. Produce deployment sizes after scene scale is finalized."
+  ],
+  "groups": {
+    "architecture": [
+      "walls",
+      "ceiling",
+      "floor",
+      "trim",
+      "ceiling-trim",
+      "window-frame",
+      "window-view",
+      "curtain-rail",
+      "curtain-left",
+      "curtain-right"
+    ],
+    "bed": [
+      "bed-complete",
+      "plant-complete"
+    ],
+    "character": [
+      "character-chair-complete",
+      "rug"
+    ],
+    "shelf": [
+      "shelf",
+      "shelf-bracket",
+      "book-blue",
+      "book-amber",
+      "book-cream",
+      "shelf-plant-complete",
+      "frame",
+      "artwork"
+    ],
+    "desk": [
+      "cupboard-complete",
+      "mouse-forward",
+      "lanyard-id-complete",
+      "cylinder-lamp",
+      "desktop",
+      "cabinet",
+      "drawer",
+      "drawer-handle",
+      "desk-leg",
+      "pc",
+      "pc-glass",
+      "monitor",
+      "monitor-stand",
+      "monitor-cable",
+      "keyboard",
+      "mouse",
+      "lamp-base",
+      "lamp-arm",
+      "lamp-shade",
+      "bottle",
+      "tablet",
+      "stationery-cup",
+      "pencil",
+      "pen",
+      "speaker",
+      "book-flat",
+      "lanyard",
+      "id-holder",
+      "id-insert",
+      "plant-foliage",
+      "plant-pot"
+    ]
+  },
+  "assets": [
+    {
+      "id": "artwork",
+      "file": "objects/artwork.png",
+      "width": 1389,
+      "height": 1132,
+      "hasAlpha": true,
+      "alphaBounds": [
+        230,
+        263,
+        1159,
+        893
+      ],
+      "transparentPixels": 975425,
+      "partialAlphaPixels": 596767,
+      "pivot": [
+        694.5,
+        893
+      ],
+      "bytes": 778244,
+      "interactionMask": "masks/artwork.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/artwork-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "bed-complete",
+      "file": "objects/bed-complete.png",
+      "width": 1416,
+      "height": 1111,
+      "hasAlpha": true,
+      "alphaBounds": [
+        29,
+        23,
+        1399,
+        1084
+      ],
+      "transparentPixels": 695608,
+      "partialAlphaPixels": 877341,
+      "pivot": [
+        714,
+        1084
+      ],
+      "bytes": 1337287,
+      "interactionMask": "masks/bed-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "bed",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/bed-complete-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "bed-frame",
+      "file": "objects/bed-frame.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        58,
+        123,
+        1481,
+        949
+      ],
+      "transparentPixels": 909843,
+      "partialAlphaPixels": 663021,
+      "pivot": [
+        769.5,
+        949
+      ],
+      "bytes": 1616703,
+      "interactionMask": "masks/bed-frame.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/bed-frame-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "bedside-foliage",
+      "file": "objects/bedside-foliage.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        145,
+        92,
+        940,
+        1452
+      ],
+      "transparentPixels": 935737,
+      "partialAlphaPixels": 637126,
+      "pivot": [
+        542.5,
+        1452
+      ],
+      "bytes": 1548410,
+      "interactionMask": "masks/bedside-foliage.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/bedside-foliage-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "book-amber",
+      "file": "objects/book-amber.png",
+      "width": 1145,
+      "height": 1374,
+      "hasAlpha": true,
+      "alphaBounds": [
+        440,
+        114,
+        714,
+        1262
+      ],
+      "transparentPixels": 1265810,
+      "partialAlphaPixels": 306090,
+      "pivot": [
+        577,
+        1262
+      ],
+      "bytes": 515977,
+      "interactionMask": "masks/book-amber.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": "/certifications",
+      "castShadow": {
+        "file": "shadows/book-amber-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "book-blue",
+      "file": "objects/book-blue.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        342,
+        196,
+        685,
+        1320
+      ],
+      "transparentPixels": 1206161,
+      "partialAlphaPixels": 366703,
+      "pivot": [
+        513.5,
+        1320
+      ],
+      "bytes": 1082030,
+      "interactionMask": "masks/book-blue.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": "/certifications",
+      "castShadow": {
+        "file": "shadows/book-blue-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "book-cream",
+      "file": "objects/book-cream.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        372,
+        220,
+        653,
+        1298
+      ],
+      "transparentPixels": 1280509,
+      "partialAlphaPixels": 292355,
+      "pivot": [
+        512.5,
+        1298
+      ],
+      "bytes": 1106506,
+      "interactionMask": "masks/book-cream.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": "/certifications",
+      "castShadow": {
+        "file": "shadows/book-cream-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "book-flat",
+      "file": "objects/book-flat.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        148,
+        195,
+        1391,
+        884
+      ],
+      "transparentPixels": 1012985,
+      "partialAlphaPixels": 559879,
+      "pivot": [
+        769.5,
+        884
+      ],
+      "bytes": 1211095,
+      "interactionMask": "masks/book-flat.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/book-flat-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "bottle",
+      "file": "objects/bottle.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        319,
+        140,
+        705,
+        1408
+      ],
+      "transparentPixels": 1085210,
+      "partialAlphaPixels": 487654,
+      "pivot": [
+        512,
+        1408
+      ],
+      "bytes": 1150578,
+      "interactionMask": "masks/bottle.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/bottle-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "cabinet",
+      "file": "objects/cabinet.png",
+      "width": 1268,
+      "height": 1240,
+      "hasAlpha": true,
+      "alphaBounds": [
+        203,
+        160,
+        1094,
+        1099
+      ],
+      "transparentPixels": 796773,
+      "partialAlphaPixels": 774039,
+      "pivot": [
+        648.5,
+        1099
+      ],
+      "bytes": 984181,
+      "interactionMask": "masks/cabinet.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/cabinet-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "ceiling-trim",
+      "file": "objects/ceiling-trim.png",
+      "width": 1999,
+      "height": 786,
+      "hasAlpha": true,
+      "alphaBounds": [
+        60,
+        306,
+        1939,
+        478
+      ],
+      "transparentPixels": 1248281,
+      "partialAlphaPixels": 318536,
+      "pivot": [
+        999.5,
+        478
+      ],
+      "bytes": 403659,
+      "interactionMask": "masks/ceiling-trim.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/ceiling-trim-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "chair-arm",
+      "file": "objects/chair-arm.png",
+      "width": 1402,
+      "height": 1122,
+      "hasAlpha": true,
+      "alphaBounds": [
+        345,
+        209,
+        1057,
+        970
+      ],
+      "transparentPixels": 1345952,
+      "partialAlphaPixels": 226031,
+      "pivot": [
+        701,
+        970
+      ],
+      "bytes": 337364,
+      "interactionMask": "masks/chair-arm.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/chair-arm-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "chair-back",
+      "file": "objects/chair-back.png",
+      "width": 1211,
+      "height": 1299,
+      "hasAlpha": true,
+      "alphaBounds": [
+        300,
+        89,
+        1008,
+        1211
+      ],
+      "transparentPixels": 970275,
+      "partialAlphaPixels": 601929,
+      "pivot": [
+        654,
+        1211
+      ],
+      "bytes": 865901,
+      "interactionMask": "masks/chair-back.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/chair-back-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "chair-base",
+      "file": "objects/chair-base.png",
+      "width": 1584,
+      "height": 993,
+      "hasAlpha": true,
+      "alphaBounds": [
+        143,
+        60,
+        1441,
+        936
+      ],
+      "transparentPixels": 1185511,
+      "partialAlphaPixels": 385958,
+      "pivot": [
+        792,
+        936
+      ],
+      "bytes": 567801,
+      "interactionMask": "masks/chair-base.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/chair-base-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "chair-seat",
+      "file": "objects/chair-seat.png",
+      "width": 1374,
+      "height": 1145,
+      "hasAlpha": true,
+      "alphaBounds": [
+        109,
+        280,
+        1266,
+        913
+      ],
+      "transparentPixels": 1047640,
+      "partialAlphaPixels": 524708,
+      "pivot": [
+        687.5,
+        913
+      ],
+      "bytes": 735672,
+      "interactionMask": "masks/chair-seat.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/chair-seat-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "character-chair-complete",
+      "file": "objects/character-chair-complete.png",
+      "width": 1058,
+      "height": 1487,
+      "hasAlpha": true,
+      "alphaBounds": [
+        33,
+        43,
+        1042,
+        1472
+      ],
+      "transparentPixels": 749295,
+      "partialAlphaPixels": 822922,
+      "pivot": [
+        537.5,
+        1472
+      ],
+      "bytes": 1305969,
+      "interactionMask": "masks/character-chair-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "character",
+      "route": "/about",
+      "castShadow": {
+        "file": "shadows/character-chair-complete-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "character",
+      "file": "objects/character.png",
+      "width": 1199,
+      "height": 1312,
+      "hasAlpha": true,
+      "alphaBounds": [
+        199,
+        88,
+        1020,
+        1255
+      ],
+      "transparentPixels": 1051282,
+      "partialAlphaPixels": 521474,
+      "pivot": [
+        609.5,
+        1255
+      ],
+      "bytes": 839493,
+      "interactionMask": "masks/character.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": "/about",
+      "castShadow": {
+        "file": "shadows/character-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "cupboard-complete",
+      "file": "objects/cupboard-complete.png",
+      "width": 1261,
+      "height": 1247,
+      "hasAlpha": true,
+      "alphaBounds": [
+        123,
+        113,
+        1141,
+        1150
+      ],
+      "transparentPixels": 554938,
+      "partialAlphaPixels": 1016896,
+      "pivot": [
+        632,
+        1150
+      ],
+      "bytes": 1015446,
+      "interactionMask": "masks/cupboard-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/cupboard-complete-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "curtain-left",
+      "file": "objects/curtain-left.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        287,
+        14,
+        729,
+        1511
+      ],
+      "transparentPixels": 1038059,
+      "partialAlphaPixels": 534805,
+      "pivot": [
+        508,
+        1511
+      ],
+      "bytes": 1451846,
+      "interactionMask": "masks/curtain-left.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/curtain-left-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "curtain-rail",
+      "file": "objects/curtain-rail.png",
+      "width": 2172,
+      "height": 724,
+      "hasAlpha": true,
+      "alphaBounds": [
+        40,
+        214,
+        2132,
+        465
+      ],
+      "transparentPixels": 1362634,
+      "partialAlphaPixels": 208092,
+      "pivot": [
+        1086,
+        465
+      ],
+      "bytes": 348244,
+      "interactionMask": "masks/curtain-rail.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/curtain-rail-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "curtain-right",
+      "file": "objects/curtain-right.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        283,
+        62,
+        737,
+        1476
+      ],
+      "transparentPixels": 1034610,
+      "partialAlphaPixels": 538254,
+      "pivot": [
+        510,
+        1476
+      ],
+      "bytes": 1415395,
+      "interactionMask": "masks/curtain-right.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/curtain-right-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "cylinder-lamp",
+      "file": "objects/cylinder-lamp.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        241,
+        73,
+        783,
+        1441
+      ],
+      "transparentPixels": 934013,
+      "partialAlphaPixels": 638851,
+      "pivot": [
+        512,
+        1441
+      ],
+      "bytes": 1218870,
+      "interactionMask": "masks/cylinder-lamp.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "toggle-lamp",
+      "castShadow": {
+        "file": "shadows/cylinder-lamp-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "desk-leg",
+      "file": "objects/desk-leg.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        316,
+        99,
+        638,
+        1437
+      ],
+      "transparentPixels": 1360273,
+      "partialAlphaPixels": 212591,
+      "pivot": [
+        477,
+        1437
+      ],
+      "bytes": 955112,
+      "interactionMask": "masks/desk-leg.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/desk-leg-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "desktop",
+      "file": "objects/desktop.png",
+      "width": 2120,
+      "height": 742,
+      "hasAlpha": true,
+      "alphaBounds": [
+        76,
+        267,
+        2044,
+        493
+      ],
+      "transparentPixels": 1133606,
+      "partialAlphaPixels": 439280,
+      "pivot": [
+        1060,
+        493
+      ],
+      "bytes": 538002,
+      "interactionMask": "masks/desktop.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/desktop-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "drawer-handle",
+      "file": "objects/drawer-handle.png",
+      "width": 2146,
+      "height": 733,
+      "hasAlpha": true,
+      "alphaBounds": [
+        211,
+        249,
+        1935,
+        469
+      ],
+      "transparentPixels": 1215623,
+      "partialAlphaPixels": 355021,
+      "pivot": [
+        1073,
+        469
+      ],
+      "bytes": 453803,
+      "interactionMask": "masks/drawer-handle.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/drawer-handle-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "drawer",
+      "file": "objects/drawer.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        104,
+        275,
+        1433,
+        748
+      ],
+      "transparentPixels": 927566,
+      "partialAlphaPixels": 645298,
+      "pivot": [
+        768.5,
+        748
+      ],
+      "bytes": 1189495,
+      "interactionMask": "masks/drawer.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/drawer-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "duvet",
+      "file": "objects/duvet.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        65,
+        112,
+        1534,
+        916
+      ],
+      "transparentPixels": 834466,
+      "partialAlphaPixels": 737812,
+      "pivot": [
+        799.5,
+        916
+      ],
+      "bytes": 1169734,
+      "interactionMask": "masks/duvet.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/duvet-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "frame",
+      "file": "objects/frame.png",
+      "width": 1447,
+      "height": 1087,
+      "hasAlpha": true,
+      "alphaBounds": [
+        230,
+        170,
+        1218,
+        917
+      ],
+      "transparentPixels": 1139890,
+      "partialAlphaPixels": 430026,
+      "pivot": [
+        724,
+        917
+      ],
+      "bytes": 501007,
+      "interactionMask": "masks/frame.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/frame-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "id-holder",
+      "file": "objects/id-holder.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        270,
+        104,
+        759,
+        1423
+      ],
+      "transparentPixels": 1263190,
+      "partialAlphaPixels": 309674,
+      "pivot": [
+        514.5,
+        1423
+      ],
+      "bytes": 1356126,
+      "interactionMask": "masks/id-holder.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "/cv",
+      "castShadow": {
+        "file": "shadows/id-holder-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "id-insert",
+      "file": "objects/id-insert.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        301,
+        393,
+        723,
+        1143
+      ],
+      "transparentPixels": 1256691,
+      "partialAlphaPixels": 316173,
+      "pivot": [
+        512,
+        1143
+      ],
+      "bytes": 898742,
+      "interactionMask": "masks/id-insert.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "/cv",
+      "castShadow": {
+        "file": "shadows/id-insert-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "keyboard",
+      "file": "objects/keyboard.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        110,
+        320,
+        1488,
+        735
+      ],
+      "transparentPixels": 1030282,
+      "partialAlphaPixels": 542026,
+      "pivot": [
+        799,
+        735
+      ],
+      "bytes": 877297,
+      "interactionMask": "masks/keyboard.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/keyboard-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "lamp-arm",
+      "file": "objects/lamp-arm.png",
+      "width": 1145,
+      "height": 1374,
+      "hasAlpha": true,
+      "alphaBounds": [
+        320,
+        84,
+        881,
+        1282
+      ],
+      "transparentPixels": 1424135,
+      "partialAlphaPixels": 148331,
+      "pivot": [
+        600.5,
+        1282
+      ],
+      "bytes": 272685,
+      "interactionMask": "masks/lamp-arm.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "toggle-lamp",
+      "castShadow": {
+        "file": "shadows/lamp-arm-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "lamp-base",
+      "file": "objects/lamp-base.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        364,
+        347,
+        1173,
+        777
+      ],
+      "transparentPixels": 1279179,
+      "partialAlphaPixels": 293685,
+      "pivot": [
+        768.5,
+        777
+      ],
+      "bytes": 959178,
+      "interactionMask": "masks/lamp-base.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "toggle-lamp",
+      "castShadow": {
+        "file": "shadows/lamp-base-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "lamp-shade",
+      "file": "objects/lamp-shade.png",
+      "width": 1374,
+      "height": 1145,
+      "hasAlpha": true,
+      "alphaBounds": [
+        341,
+        221,
+        1037,
+        943
+      ],
+      "transparentPixels": 1242916,
+      "partialAlphaPixels": 329501,
+      "pivot": [
+        689,
+        943
+      ],
+      "bytes": 464732,
+      "interactionMask": "masks/lamp-shade.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "toggle-lamp",
+      "castShadow": {
+        "file": "shadows/lamp-shade-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "lanyard-id-complete",
+      "file": "objects/lanyard-id-complete.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        351,
+        70,
+        642,
+        1419
+      ],
+      "transparentPixels": 1327759,
+      "partialAlphaPixels": 245105,
+      "pivot": [
+        496.5,
+        1419
+      ],
+      "bytes": 1144268,
+      "interactionMask": "masks/lanyard-id-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "/cv",
+      "castShadow": {
+        "file": "shadows/lanyard-id-complete-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "lanyard",
+      "file": "objects/lanyard.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        335,
+        78,
+        704,
+        1448
+      ],
+      "transparentPixels": 1305024,
+      "partialAlphaPixels": 267840,
+      "pivot": [
+        519.5,
+        1448
+      ],
+      "bytes": 1180663,
+      "interactionMask": "masks/lanyard.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/lanyard-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "mattress",
+      "file": "objects/mattress.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        42,
+        229,
+        1547,
+        888
+      ],
+      "transparentPixels": 904796,
+      "partialAlphaPixels": 667501,
+      "pivot": [
+        794.5,
+        888
+      ],
+      "bytes": 1160414,
+      "interactionMask": "masks/mattress.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/mattress-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "monitor-cable",
+      "file": "objects/monitor-cable.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        595,
+        80,
+        1011,
+        925
+      ],
+      "transparentPixels": 1506687,
+      "partialAlphaPixels": 65107,
+      "pivot": [
+        803,
+        925
+      ],
+      "bytes": 179040,
+      "interactionMask": "masks/monitor-cable.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/monitor-cable-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "monitor-stand",
+      "file": "objects/monitor-stand.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        327,
+        115,
+        1210,
+        943
+      ],
+      "transparentPixels": 1287652,
+      "partialAlphaPixels": 285212,
+      "pivot": [
+        768.5,
+        943
+      ],
+      "bytes": 964103,
+      "interactionMask": "masks/monitor-stand.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/monitor-stand-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "monitor",
+      "file": "objects/monitor.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        186,
+        144,
+        1400,
+        841
+      ],
+      "transparentPixels": 701288,
+      "partialAlphaPixels": 870996,
+      "pivot": [
+        793,
+        841
+      ],
+      "bytes": 906102,
+      "interactionMask": "masks/monitor.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "/projects",
+      "castShadow": {
+        "file": "shadows/monitor-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "mouse-forward",
+      "file": "objects/mouse-forward.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        277,
+        119,
+        1247,
+        931
+      ],
+      "transparentPixels": 994972,
+      "partialAlphaPixels": 577892,
+      "pivot": [
+        762,
+        931
+      ],
+      "bytes": 1291975,
+      "interactionMask": "masks/mouse-forward.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/mouse-forward-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "mouse",
+      "file": "objects/mouse.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        303,
+        208,
+        1251,
+        817
+      ],
+      "transparentPixels": 1145374,
+      "partialAlphaPixels": 427490,
+      "pivot": [
+        777,
+        817
+      ],
+      "bytes": 1080040,
+      "interactionMask": "masks/mouse.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/mouse-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "pc-glass",
+      "file": "objects/pc-glass.png",
+      "width": 1431,
+      "height": 1099,
+      "hasAlpha": true,
+      "alphaBounds": [
+        324,
+        94,
+        1108,
+        1033
+      ],
+      "transparentPixels": 807088,
+      "partialAlphaPixels": 763767,
+      "pivot": [
+        716,
+        1033
+      ],
+      "bytes": 942531,
+      "interactionMask": "masks/pc-glass.svg",
+      "maskAlphaThreshold": 24,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/pc-glass-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "pc",
+      "file": "objects/pc.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "alphaBounds": [
+        164,
+        164,
+        1091,
+        1144
+      ],
+      "transparentPixels": 697486,
+      "partialAlphaPixels": 873916,
+      "pivot": [
+        627.5,
+        1144
+      ],
+      "bytes": 1216108,
+      "interactionMask": "masks/pc.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": "/research",
+      "castShadow": {
+        "file": "shadows/pc-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "pen",
+      "file": "objects/pen.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        383,
+        76,
+        692,
+        1438
+      ],
+      "transparentPixels": 1371363,
+      "partialAlphaPixels": 201501,
+      "pivot": [
+        537.5,
+        1438
+      ],
+      "bytes": 986358,
+      "interactionMask": "masks/pen.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/pen-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "pencil",
+      "file": "objects/pencil.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        339,
+        82,
+        707,
+        1417
+      ],
+      "transparentPixels": 1324600,
+      "partialAlphaPixels": 248264,
+      "pivot": [
+        523,
+        1417
+      ],
+      "bytes": 989744,
+      "interactionMask": "masks/pencil.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/pencil-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "pillow",
+      "file": "objects/pillow.png",
+      "width": 1584,
+      "height": 993,
+      "hasAlpha": true,
+      "alphaBounds": [
+        191,
+        212,
+        1459,
+        858
+      ],
+      "transparentPixels": 979885,
+      "partialAlphaPixels": 592385,
+      "pivot": [
+        825,
+        858
+      ],
+      "bytes": 857437,
+      "interactionMask": "masks/pillow.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/pillow-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "plant-complete",
+      "file": "objects/plant-complete.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        212,
+        28,
+        814,
+        1485
+      ],
+      "transparentPixels": 1006221,
+      "partialAlphaPixels": 566643,
+      "pivot": [
+        513,
+        1485
+      ],
+      "bytes": 1751100,
+      "interactionMask": "masks/plant-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "bed",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/plant-complete-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "plant-foliage",
+      "file": "objects/plant-foliage.png",
+      "width": 1024,
+      "height": 1536,
+      "hasAlpha": true,
+      "alphaBounds": [
+        154,
+        18,
+        869,
+        1509
+      ],
+      "transparentPixels": 873466,
+      "partialAlphaPixels": 699398,
+      "pivot": [
+        511.5,
+        1509
+      ],
+      "bytes": 1772509,
+      "interactionMask": "masks/plant-foliage.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/plant-foliage-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "plant-pot",
+      "file": "objects/plant-pot.png",
+      "width": 1224,
+      "height": 1285,
+      "hasAlpha": true,
+      "alphaBounds": [
+        227,
+        210,
+        998,
+        1102
+      ],
+      "transparentPixels": 957274,
+      "partialAlphaPixels": 614604,
+      "pivot": [
+        612.5,
+        1102
+      ],
+      "bytes": 729103,
+      "interactionMask": "masks/plant-pot.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/plant-pot-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "rug",
+      "file": "objects/rug.png",
+      "width": 1584,
+      "height": 993,
+      "hasAlpha": true,
+      "alphaBounds": [
+        23,
+        345,
+        1562,
+        774
+      ],
+      "transparentPixels": 975455,
+      "partialAlphaPixels": 597186,
+      "pivot": [
+        792.5,
+        774
+      ],
+      "bytes": 1252621,
+      "interactionMask": "masks/rug.svg",
+      "maskAlphaThreshold": 230,
+      "group": "character",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/rug-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "sheet",
+      "file": "objects/sheet.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        107,
+        135,
+        1479,
+        883
+      ],
+      "transparentPixels": 890000,
+      "partialAlphaPixels": 682313,
+      "pivot": [
+        793,
+        883
+      ],
+      "bytes": 1047024,
+      "interactionMask": "masks/sheet.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/sheet-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "shelf-bracket",
+      "file": "objects/shelf-bracket.png",
+      "width": 1312,
+      "height": 1199,
+      "hasAlpha": true,
+      "alphaBounds": [
+        240,
+        263,
+        1008,
+        1016
+      ],
+      "transparentPixels": 1341698,
+      "partialAlphaPixels": 230570,
+      "pivot": [
+        624,
+        1016
+      ],
+      "bytes": 317460,
+      "interactionMask": "masks/shelf-bracket.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/shelf-bracket-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "shelf-foliage",
+      "file": "objects/shelf-foliage.png",
+      "width": 1167,
+      "height": 1347,
+      "hasAlpha": true,
+      "alphaBounds": [
+        231,
+        60,
+        970,
+        1300
+      ],
+      "transparentPixels": 1073659,
+      "partialAlphaPixels": 496890,
+      "pivot": [
+        600.5,
+        1300
+      ],
+      "bytes": 874756,
+      "interactionMask": "masks/shelf-foliage.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/shelf-foliage-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "shelf-plant-complete",
+      "file": "objects/shelf-plant-complete.png",
+      "width": 1166,
+      "height": 1349,
+      "hasAlpha": true,
+      "alphaBounds": [
+        206,
+        40,
+        968,
+        1324
+      ],
+      "transparentPixels": 1055970,
+      "partialAlphaPixels": 515708,
+      "pivot": [
+        587,
+        1324
+      ],
+      "bytes": 872962,
+      "interactionMask": "masks/shelf-plant-complete.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/shelf-plant-complete-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "shelf-pot",
+      "file": "objects/shelf-pot.png",
+      "width": 1294,
+      "height": 1216,
+      "hasAlpha": true,
+      "alphaBounds": [
+        294,
+        24,
+        1002,
+        1198
+      ],
+      "transparentPixels": 1114842,
+      "partialAlphaPixels": 457798,
+      "pivot": [
+        648,
+        1198
+      ],
+      "bytes": 728976,
+      "interactionMask": "masks/shelf-pot.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shadows",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/shelf-pot-cast.svg",
+        "receiver": "floor",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "shelf",
+      "file": "objects/shelf.png",
+      "width": 2012,
+      "height": 781,
+      "hasAlpha": true,
+      "alphaBounds": [
+        84,
+        296,
+        1928,
+        451
+      ],
+      "transparentPixels": 1267911,
+      "partialAlphaPixels": 302968,
+      "pivot": [
+        1006,
+        451
+      ],
+      "bytes": 369252,
+      "interactionMask": "masks/shelf.svg",
+      "maskAlphaThreshold": 230,
+      "group": "shelf",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/shelf-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "speaker",
+      "file": "objects/speaker.png",
+      "width": 1536,
+      "height": 1024,
+      "hasAlpha": true,
+      "alphaBounds": [
+        480,
+        282,
+        1056,
+        824
+      ],
+      "transparentPixels": 1298344,
+      "partialAlphaPixels": 274520,
+      "pivot": [
+        768,
+        824
+      ],
+      "bytes": 1095900,
+      "interactionMask": "masks/speaker.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/speaker-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "stationery-cup",
+      "file": "objects/stationery-cup.png",
+      "width": 1263,
+      "height": 1246,
+      "hasAlpha": true,
+      "alphaBounds": [
+        236,
+        227,
+        1027,
+        1086
+      ],
+      "transparentPixels": 1013358,
+      "partialAlphaPixels": 559648,
+      "pivot": [
+        631.5,
+        1086
+      ],
+      "bytes": 691301,
+      "interactionMask": "masks/stationery-cup.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/stationery-cup-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "tablet",
+      "file": "objects/tablet.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": true,
+      "alphaBounds": [
+        236,
+        303,
+        1539,
+        646
+      ],
+      "transparentPixels": 1261738,
+      "partialAlphaPixels": 311059,
+      "pivot": [
+        887.5,
+        646
+      ],
+      "bytes": 440163,
+      "interactionMask": "masks/tablet.svg",
+      "maskAlphaThreshold": 230,
+      "group": "desk",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/tablet-cast.svg",
+        "receiver": "desktop",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "trim",
+      "file": "objects/trim.png",
+      "width": 2083,
+      "height": 755,
+      "hasAlpha": true,
+      "alphaBounds": [
+        72,
+        274,
+        2012,
+        485
+      ],
+      "transparentPixels": 1154733,
+      "partialAlphaPixels": 415910,
+      "pivot": [
+        1042,
+        485
+      ],
+      "bytes": 452322,
+      "interactionMask": "masks/trim.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/trim-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "window-frame",
+      "file": "objects/window-frame.png",
+      "width": 1373,
+      "height": 1145,
+      "hasAlpha": true,
+      "alphaBounds": [
+        146,
+        87,
+        1227,
+        1058
+      ],
+      "transparentPixels": 1067824,
+      "partialAlphaPixels": 501561,
+      "pivot": [
+        686.5,
+        1058
+      ],
+      "bytes": 585016,
+      "interactionMask": "masks/window-frame.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/window-frame-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "window-view",
+      "file": "objects/window-view.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        437,
+        54,
+        1150,
+        938
+      ],
+      "transparentPixels": 932328,
+      "partialAlphaPixels": 639871,
+      "pivot": [
+        793.5,
+        938
+      ],
+      "bytes": 926034,
+      "interactionMask": "masks/window-view.svg",
+      "maskAlphaThreshold": 230,
+      "group": "architecture",
+      "route": null,
+      "castShadow": {
+        "file": "shadows/window-view-cast.svg",
+        "receiver": "wall",
+        "projection": "adjust during scene assembly; use same parent transform as object"
+      }
+    },
+    {
+      "id": "ceiling",
+      "file": "surfaces/ceiling.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": false,
+      "alphaBounds": [
+        0,
+        0,
+        1774,
+        887
+      ],
+      "transparentPixels": 0,
+      "partialAlphaPixels": 0,
+      "pivot": [
+        887,
+        887
+      ],
+      "bytes": 1425168,
+      "group": "architecture",
+      "route": null
+    },
+    {
+      "id": "floor",
+      "file": "surfaces/floor.png",
+      "width": 1584,
+      "height": 993,
+      "hasAlpha": false,
+      "alphaBounds": [
+        0,
+        0,
+        1584,
+        993
+      ],
+      "transparentPixels": 0,
+      "partialAlphaPixels": 0,
+      "pivot": [
+        792,
+        993
+      ],
+      "bytes": 1725928,
+      "group": "architecture",
+      "route": null
+    },
+    {
+      "id": "walls",
+      "file": "surfaces/walls.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": false,
+      "alphaBounds": [
+        0,
+        0,
+        1774,
+        887
+      ],
+      "transparentPixels": 0,
+      "partialAlphaPixels": 0,
+      "pivot": [
+        887,
+        887
+      ],
+      "bytes": 1686135,
+      "group": "architecture",
+      "route": null
+    },
+    {
+      "id": "lamp-bulb",
+      "file": "lights/lamp-bulb.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        575,
+        277,
+        1039,
+        724
+      ],
+      "transparentPixels": 1300406,
+      "partialAlphaPixels": 271914,
+      "pivot": [
+        807,
+        724
+      ],
+      "bytes": 372398,
+      "group": "lighting",
+      "route": null
+    },
+    {
+      "id": "lamp-wall",
+      "file": "lights/lamp-wall.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        233,
+        180,
+        1332,
+        838
+      ],
+      "transparentPixels": 483954,
+      "partialAlphaPixels": 1088366,
+      "pivot": [
+        782.5,
+        838
+      ],
+      "bytes": 1220139,
+      "group": "lighting",
+      "route": null
+    },
+    {
+      "id": "pc-fan-light",
+      "file": "lights/pc-fan-light.png",
+      "width": 1254,
+      "height": 1254,
+      "hasAlpha": true,
+      "alphaBounds": [
+        102,
+        107,
+        1151,
+        1127
+      ],
+      "transparentPixels": 979143,
+      "partialAlphaPixels": 591289,
+      "pivot": [
+        626.5,
+        1127
+      ],
+      "bytes": 860797,
+      "group": "lighting",
+      "route": null
+    },
+    {
+      "id": "pc-spill",
+      "file": "lights/pc-spill.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        19,
+        177,
+        946,
+        936
+      ],
+      "transparentPixels": 660689,
+      "partialAlphaPixels": 911631,
+      "pivot": [
+        482.5,
+        936
+      ],
+      "bytes": 1275654,
+      "group": "lighting",
+      "route": null
+    },
+    {
+      "id": "window-light",
+      "file": "lights/window-light.png",
+      "width": 1584,
+      "height": 993,
+      "hasAlpha": true,
+      "alphaBounds": [
+        0,
+        0,
+        882,
+        919
+      ],
+      "transparentPixels": 633715,
+      "partialAlphaPixels": 939197,
+      "pivot": [
+        441,
+        919
+      ],
+      "bytes": 1132581,
+      "group": "lighting",
+      "route": null
+    },
+    {
+      "id": "bed-contact",
+      "file": "shadows/bed-contact.png",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": true,
+      "alphaBounds": [
+        162,
+        493,
+        1729,
+        800
+      ],
+      "transparentPixels": 1221212,
+      "partialAlphaPixels": 352326,
+      "pivot": [
+        945.5,
+        800
+      ],
+      "bytes": 468766,
+      "group": "shadows",
+      "route": null
+    },
+    {
+      "id": "chair-contact",
+      "file": "shadows/chair-contact.png",
+      "width": 1585,
+      "height": 992,
+      "hasAlpha": true,
+      "alphaBounds": [
+        217,
+        650,
+        1377,
+        870
+      ],
+      "transparentPixels": 1262604,
+      "partialAlphaPixels": 309716,
+      "pivot": [
+        797,
+        870
+      ],
+      "bytes": 404627,
+      "group": "shadows",
+      "route": null
+    },
+    {
+      "id": "desk-contact",
+      "file": "shadows/desk-contact.png",
+      "width": 2141,
+      "height": 734,
+      "hasAlpha": true,
+      "alphaBounds": [
+        61,
+        571,
+        2065,
+        683
+      ],
+      "transparentPixels": 1263279,
+      "partialAlphaPixels": 308215,
+      "pivot": [
+        1063,
+        683
+      ],
+      "bytes": 454059,
+      "group": "shadows",
+      "route": null
+    },
+    {
+      "id": "shelf-cast",
+      "file": "shadows/shelf-cast.png",
+      "width": 2056,
+      "height": 765,
+      "hasAlpha": true,
+      "alphaBounds": [
+        133,
+        212,
+        1910,
+        373
+      ],
+      "transparentPixels": 1206340,
+      "partialAlphaPixels": 366500,
+      "pivot": [
+        1021.5,
+        373
+      ],
+      "bytes": 556970,
+      "group": "shadows",
+      "route": null
+    }
+  ]
+}

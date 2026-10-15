@@ -28,3 +28,13 @@ Pause motion controls are available in the room, gallery, and global menu. Syste
 ## Reference capture
 
 scripts/capture-reference.py saves bounded public HTML pages and first-party CSS/JS to design-reference/mildsugar/. The archive is ignored by Git and ESLint and never served or imported. See design-reference/README.md.
+
+## Interactive room update
+
+The current artwork is public/art/pixel-room-v2.png, edited with the built-in image tool to square the PC to the desk, move the bottle beside the lamp, remove desktop clutter, straighten the bedding, and add a hanging ID card/lanyard. The previous image remains as an earlier version. No user portrait or source CV PDF is distributed.
+
+The room uses a contained 1619 by 972 canvas so hotspot coordinates from src/data/room.ts remain aligned on every viewport. Lamp lighting uses an opacity overlay and starts off. Interactive silhouettes pulse white periodically and brighten on hover/focus, with a static reduced-motion fallback. The existing pause controls stop the repeated hints.
+
+Object mapping: lamp controls lighting; ID card opens /cv; monitor opens /projects; PC opens /research; shelf books open /certifications; character opens the introduction. The profile can be closed to restore room navigation and keyboard focus. Mobile displays the full room with accessible shortcut controls.
+
+Career text combines the verified outreach automation priorities (AI applications/architecture, data, fintech, software architecture) with the user's explicit Cloud/DevOps and solutions-architecture targets. They are interests, not claimed employment titles. The CV content is transcribed from the supplied updated resume, with public portfolio contact channels and print styling. Credentials are limited to the AWS and IBM entries confirmed by the user.

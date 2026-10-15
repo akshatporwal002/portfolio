@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layered room asset review</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#201c25;color:#f7f4ed;font:16px system-ui}header{padding:32px;max-width:1100px}h1{margin:0 0 12px}p{line-height:1.6;color:#d6cbdc}main{padding:0 24px 32px;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}article{background:#302939;border:1px solid #51455a;border-radius:12px;overflow:hidden}figure{height:230px;margin:0;background-color:#dfdde0;background-image:linear-gradient(45deg,#c5c2c8 25%,transparent 25%),linear-gradient(-45deg,#c5c2c8 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#c5c2c8 75%),linear-gradient(-45deg,transparent 75%,#c5c2c8 75%);background-size:24px 24px;background-position:0 0,0 12px,12px -12px,-12px 0;display:flex;align-items:center;justify-content:center;overflow:hidden}img{display:block;width:auto;height:auto;min-width:0;min-height:0;max-width:100%;max-height:100%;object-fit:contain;image-rendering:pixelated}h2{font-size:17px;margin:16px}article p{font-size:13px;margin:16px}a{color:#ffb33f}button{background:#ffb33f;color:#211b24;padding:10px 15px;border:0;border-radius:8px;cursor:pointer}.dark figure{background:#1c1822;background-image:none}nav{display:flex;gap:12px;flex-wrap:wrap}
+</style>
+<header><h1>Room asset review</h1><p>Separate source assets for the pixel room. Checkerboard shows real transparency. Lighting and shadows are independent files. These are source artwork; the responsive scene assembly is a separate step.</p><nav><button id="backdrop">Toggle dark background</button><a href="manifest.json">Layer manifest</a><a href="asset-metadata.json">Alpha bounds and dimensions</a></nav></header>
+<main id="assets" aria-live="polite"></main>
+<script>
+document.querySelector('#backdrop').onclick=()=>document.body.classList.toggle('dark');
+fetch('asset-metadata.json').then(r=>{if(!r.ok)throw Error('Asset metadata unavailable');return r.json()}).then(rows=>{
+ for(const row of rows){const article=document.createElement('article'),figure=document.createElement('figure'),img=document.createElement('img'),h=document.createElement('h2'),p=document.createElement('p'),a=document.createElement('a');img.src=row.file;if(row.interactionMask){img.style.maskImage='url('+row.interactionMask+')';img.style.maskSize='100% 100%';img.style.maskRepeat='no-repeat';}img.alt=row.id.replaceAll('-',' ');img.loading='lazy';figure.append(img);h.textContent=img.alt;p.textContent=`${row.width} × ${row.height} · ${row.hasAlpha?'alpha':'opaque'} · ${Math.round(row.bytes/1024)} KB`;a.href=row.file;a.textContent='Open original PNG';p.append(document.createElement('br'),a);article.append(figure,h,p);document.querySelector('#assets').append(article)}
+}).catch(e=>{document.querySelector('#assets').textContent=e.message});
+</script></html>
+
+

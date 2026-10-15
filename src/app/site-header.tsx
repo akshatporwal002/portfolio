@@ -2,8 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { projects } from "@/data/projects";
-import { MotionToggle } from "./portfolio-motion";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
@@ -31,10 +29,10 @@ export function SiteHeader() {
     return <Link href={href} aria-current={pathname === href ? "page" : undefined} onClick={() => setOpen(false)}>{label}</Link>;
   }
   return <header className={`sugar-header ${pathname === "/" ? "on-room" : ""}`}>
-    <div className="sugar-brand"><Link href="/">akshat porwal</Link><p>Software Engineering<br />AI Systems<br />Learning Products<br />Research &amp; Open Source</p></div>
+    <div className="sugar-brand"><Link href="/">akshat porwal</Link><p>AI Engineering<br />Cloud &amp; DevOps<br />Solutions Architecture<br />Fintech</p></div>
     <div ref={panel} className={`sugar-menu ${open ? "is-open" : ""}`}>
       <button ref={toggle} className="sugar-menu-toggle" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="portfolio-menu" onClick={() => setOpen(!open)}><span className="menu-dots" aria-hidden="true"><i /><i /><i /></span></button>
-      <nav id="portfolio-menu" aria-label="Main navigation" inert={!open}>{item("/", "Home")}{item("/about", "About")}<span className="menu-caption">Selected work</span>{projects.map((project, index) => <div key={project.slug}>{item(`/projects/${project.slug}`, `Case ${index + 1}`)}</div>)}{item("/projects", "All projects")}{item("/research", "Research")}<a href="mailto:akshatporwalwork@gmail.com" onClick={() => setOpen(false)}>Contact</a><MotionToggle /></nav>
+      <nav id="portfolio-menu" aria-label="Main navigation" inert={!open}>{item("/", "Home")}{item("/about", "About")}{item("/cv", "CV")}{item("/certifications", "Certifications & skills")}{item("/experience", "Experience")}{item("/projects", "Projects")}<a href="mailto:akshatporwalwork@gmail.com" onClick={() => setOpen(false)}>Contact</a></nav>
     </div>
   </header>;
 }

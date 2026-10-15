@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { SiteHeader } from "../site-header";
+import { resume } from "@/data/resume";
+export const metadata: Metadata = { title: "Experience — Akshat Porwal", description: "Client work, applied AI and solution architecture." };
+export default function ExperiencePage() { return <><SiteHeader /><main id="content" className="sugar-case"><header className="sugar-case-heading"><p>Experience</p><h1>From requirements<br />to working software.</h1></header><article className="sugar-case-body">{resume.experience.map(job => <section className="sugar-prose-row" key={job.title}><h2>{job.title}</h2><div><p>{job.organisation}<br />{job.dates}</p><ul>{job.points.map(point => <li key={point}>{point}</li>)}</ul></div></section>)}<section className="sugar-prose-row"><h2>Solution architecture</h2><div><p>My AI, cloud and financial intelligence work spans personal products and university teams.</p><Link className="text-link" href="/projects">Explore the projects ↗</Link></div></section></article><footer className="sugar-footer"><Link href="/cv">Full CV ↗</Link><a href="mailto:akshatporwalwork@gmail.com">Contact ↗</a></footer></main></>; }

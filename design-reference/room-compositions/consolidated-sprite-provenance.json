@@ -1,0 +1,42 @@
+[
+  {
+    "id": "bed-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-d764d449-d197-442f-a3f5-4d4256d8932d.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. A complete single bed including dark wooden frame and visible feet, cream mattress, neatly fitted sheet, folded cream textured duvet and two cream pillows. Same three-quarter view and proportions as reference bed, head at upper left, foot toward lower right."
+  },
+  {
+    "id": "cupboard-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-5d73a529-4141-4fec-85b7-041176864603.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. The complete dark charcoal three drawer cabinet beneath desk, including cabinet shell, all three closed drawers, recessed black handles and small feet, slight visible right side. No desk or tabletop."
+  },
+  {
+    "id": "plant-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-b4174902-270f-4637-9707-ef35cd2dd348.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. Complete tall floor plant including leafy foliage, connected thin stems, soil and cream cylindrical pot. Dense cascading green leaves and slender upright branches, same reference plant at left. One connected plant."
+  },
+  {
+    "id": "shelf-plant-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-162ff963-f5cc-44e1-9fb0-747683d5f93e.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. One complete small potted trailing pothos including cream pot, dense green top foliage and vines hanging down the sides. Pot bottom about 35 percent down total silhouette, longest vine to bottom. No shelf."
+  },
+  {
+    "id": "lanyard-id-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-7cd51279-7bd5-4a7a-abc0-f8631ad6e4b2.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. One complete black fabric loop lanyard draped over an invisible tabletop edge, metal clip and cream ID card in dark badge holder at bottom, loop at top. Simple tiny portrait and abstract dark text marks on card, not real text. All parts connected, narrow vertical silhouette."
+  },
+  {
+    "id": "character-chair-complete",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-170cd5ff-1f4d-41e9-81ac-6804c27d1250.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. The SAME young man in the reference: dark tousled hair, gold round glasses, beard, charcoal tshirt, dark trousers and grey slippers. Seated naturally IN one complete black ergonomic mesh office chair, viewing from behind his right side, facing left toward an invisible monitor, left elbow held at desk height and hand at chin. Include entire coherent chair, connected headrest/back/seat/arms/central cylinder/five caster base. His hips firmly ON seat, thighs resting on seat, bent knees, BOTH slippers resting on same imaginary floor plane as caster wheels. Chair supports person. No floating disconnected pieces. All anatomy and chair mechanically coherent. Bottom wheels and soles form natural grounded footprint. No desk, no rug, no baked ground plane. Tall overall silhouette approx width 0.72 times height."
+  },
+  {
+    "id": "mouse-forward",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-67c45eef-4908-4300-be88-360232287f2b.png",
+    "prompt": "Create ONE complete isolated transparent PNG sprite for this layered pixel-art room, matching reference camera, detailed crisp pixel clusters, amber light from upper right, purple fill from left, dark outlines, high quality. No background, floor, wall, other objects, labels or external cast shadow. Preserve all internal self shading. Entire object visible with padding. One small dark charcoal wireless computer mouse seen from room camera slightly above. Its front buttons and scroll-wheel end point AWAY from viewer, toward upper LEFT, towards monitor. Rear rounded palm end at lower RIGHT. Narrow natural mouse proportions, detailed pixel art, no cable."
+  },
+  {
+    "id": "cylinder-lamp",
+    "path": "C:\\Users\\aoswa\\.codex\\generated_images\\01a13a35-90d2-7a21-aea3-b2074348038b\\exec-58a96f3c-d154-47cb-aa7d-9f28471c0588.png",
+    "prompt": "Create ONE isolated transparent PNG sprite of a simple desk lamp for the detailed pixel-art room in reference 1, using lamp shape from photo reference 2. Cream upright cylindrical fabric shade with plain rounded open top rim, NO spikes, no pins, no protruding rods, no articulated arm. Short single metal stem, flat circular brushed silver metal base. Whole lamp including base, coherent proportions shade height 2.2x shade width; complete lamp height 3x width. Slight view from above matching room camera. Rich crisp pixel clusters, dark outline, warm amber illumination inside cream shade, purple reflected light on silver base. No background, tabletop, wall, shadow plane or other object. Include internal shading, exterior silhouette clean transparent."
+  }
+]
