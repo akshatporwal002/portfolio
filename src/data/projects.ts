@@ -668,6 +668,60 @@ const cvProjects: Project[] = [
 // CV order is the public allowlist; archived project data and media stay in the repository.
 
 export const projectLiveUrls: Record<string,string> = {"stonks-in-hand":"https://stonksinhand.info", "quantumlearn":"https://learnlens.akshatporwal.dev"};
+const projectMedia: Record<string,NonNullable<Project["screenshots"]>> = {
+  "stonks-in-hand": [
+    {
+      "src": "/projects/stonks-in-hand/home.jpg",
+      "alt": "Stonks-in-Hand homepage with company search and recent source material.",
+      "width": 1270,
+      "height": 714,
+      "position": "center top"
+    },
+    {
+      "src": "/projects/stonks-in-hand/company-search.jpg",
+      "alt": "Company search browsing the available ASX companies and sectors.",
+      "width": 1270,
+      "height": 714
+    },
+    {
+      "src": "/projects/stonks-in-hand/market-feed.jpg",
+      "alt": "Market feed with sector and date filters, source records and trending companies.",
+      "width": 1270,
+      "height": 714
+    },
+    {
+      "src": "/projects/stonks-in-hand/company-research.jpg",
+      "alt": "Company topical research with original source evidence alongside the analysis.",
+      "width": 1270,
+      "height": 714
+    }
+  ],
+  "fraud-detection": [
+    {
+      "src": "/projects/fraud-detection-cover.png",
+      "alt": "Conceptual cover illustration: finding an unusual transaction within a connected network.",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "bayesian-insurance": [
+    {
+      "src": "/projects/bayesian-insurance-cover.png",
+      "alt": "Conceptual cover illustration: probability curves and heavy-tailed insurance risk.",
+      "width": 1536,
+      "height": 1024
+    }
+  ],
+  "asx-stock-analysis": [
+    {
+      "src": "/projects/asx-stock-analysis-cover.png",
+      "alt": "Conceptual cover illustration: stock correlations, clusters and portfolio trajectories.",
+      "width": 1536,
+      "height": 1024
+    }
+  ]
+};
+
 export const projectOrder = resume.projects.map(project => project.slug);
 
 export const projects: Project[] = projectOrder.map(slug => {
@@ -676,7 +730,7 @@ export const projects: Project[] = projectOrder.map(slug => {
 
  const previous = archivedProjects.find(project => project.slug === slug);
 
- return {...previous, ...current, live: projectLiveUrls[slug] ?? current.live ?? previous?.live, screenshots: slug === "engram" ? [
+ return {...previous, ...current, live: projectLiveUrls[slug] ?? current.live ?? previous?.live, screenshots: projectMedia[slug] ?? (slug === "engram" ? [
   {
     "src": "/projects/engram/today.png",
     "alt": "Daily study dashboard",
@@ -722,7 +776,7 @@ export const projects: Project[] = projectOrder.map(slug => {
     "alt": "Assistant working across the application",
     "group": "Settings and AI"
   }
-] : current.screenshots ?? previous?.screenshots};
+] : current.screenshots ?? previous?.screenshots)};
 
 });
 
