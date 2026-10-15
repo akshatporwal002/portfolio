@@ -5,7 +5,7 @@
 .sugar-menu::before { content:''; position:absolute; inset:0; background:var(--accent); border-radius:28px; transform-origin:top right; transform:scale(.215,.14); opacity:0; transition:transform .18s var(--motion-ease),opacity .12s; }
 .sugar-menu.is-open::before { transform:scale(1); opacity:1; transition:transform .24s var(--motion-ease),opacity .1s; }
 .sugar-menu-toggle { pointer-events:auto; z-index:2; }
-.sugar-menu nav { position:relative; visibility:hidden; pointer-events:none; overflow-y:auto; min-height:0; padding-top:0; gap:2px; }
+.sugar-menu nav { position:relative; visibility:hidden; pointer-events:none; overflow-y:auto; overflow-x:hidden; min-height:0; padding-top:0; gap:2px; overscroll-behavior:contain; scrollbar-width:thin; scrollbar-color:#66451e var(--accent); }
 .sugar-menu.is-open nav { visibility:visible; pointer-events:auto; }
 .sugar-menu nav a { flex-shrink:0; min-height:44px; padding:10px 8px; line-height:1.4; overflow-wrap:anywhere; }
 .sugar-menu nav > * { opacity:0; transform:translateY(4px); transition:opacity .12s,transform .12s; }
@@ -75,3 +75,8 @@ html:has(.motion-paused) { scroll-behavior: auto; }
   .page-wipe { display: none; }
   .gallery-slide:not(.is-current) > h1, .gallery-slide:not(.is-current) > h2, .gallery-slide:not(.is-current) .gallery-image, .gallery-slide:not(.is-current) .about-art, .gallery-slide:not(.is-current) .gallery-summary, .reveal-pending { opacity: 1; transform: none; }
 }
+
+/* Match native Windows scrollbars to the panel instead of its white default track. */
+.sugar-menu nav::-webkit-scrollbar { width:6px; background:var(--accent); }
+.sugar-menu nav::-webkit-scrollbar-track, .sugar-menu nav::-webkit-scrollbar-corner { background:var(--accent); }
+.sugar-menu nav::-webkit-scrollbar-thumb { background:#66451e; border:1px solid var(--accent); border-radius:8px; }

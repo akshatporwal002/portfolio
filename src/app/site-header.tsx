@@ -32,7 +32,7 @@ export function SiteHeader() {
     <div className="sugar-brand"><Link href="/">akshat porwal</Link><p>AI Engineering<br />Cloud &amp; DevOps<br />Solutions Architecture<br />Fintech</p></div>
     <div ref={panel} className={`sugar-menu ${open ? "is-open" : ""}`}>
       <button ref={toggle} className="sugar-menu-toggle" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="portfolio-menu" onClick={() => setOpen(!open)}><span className="menu-dots" aria-hidden="true"><i /><i /><i /></span></button>
-      <nav id="portfolio-menu" aria-label="Main navigation" inert={!open}>{item("/", "Home")}{item("/about", "About")}{item("/cv", "CV")}{item("/certifications", "Certifications & skills")}{item("/experience", "Experience")}{item("/projects", "Projects")}<a href="mailto:akshatporwalwork@gmail.com" onClick={() => setOpen(false)}>Contact</a></nav>
+      <nav id="portfolio-menu" aria-label="Main navigation" inert={!open}>{item("/", "Home")}{item("/about", "About")}{item("/cv", "CV")}{item("/certifications", "Certifications & skills")}{item("/experience", "Experience")}{item("/projects", "Projects")}{item("/devnotes", "Devnotes")}<a href="mailto:akshatporwalwork@gmail.com" onClick={() => setOpen(false)}>Contact</a></nav>
     </div>
   </header>;
 }
